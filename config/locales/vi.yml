@@ -54,13 +54,35 @@ vi:
     cl: "Quận Cẩm Lệ"
     hv: "Huyện Hoà Vang"
     hs: "Quần đảo Hoàng Sa"
+  user:
+    create:
+      success: "Tạo tài khoản thành công"
+      unsuccess: " Tạo tài khoản không thành công"
   users:
     new:
-      title: "Đăng kí"
-      h1: "Đăng kí"
-      confirmation: "Xác Nhận Mật Khẩu"
-      createAccount: "Tạo Tài Khoản"
+      newu:
+        title: "Đăng ký"
+        h1: "Đăng kí"
+        confirmation: "Xác nhận mật khẩu"
+        phone: "Số điện thoại"
+        createAccount: "Tạo tài khoản"
   shared:
     error_messages:
-      contains: The form contains %{errors}
-      error: "error"
+      conrains: "Biểu mẫu chứa %{errors}"
+      error: "lỗi"
+  assession:
+    show: "Không tìm thấy người dùng"
+  sessions:
+    title: "Đăng Nhập"
+    h1: "Đăng Nhập"
+    login: "Đăng Nhập"
+    new_user: "Người dùng mới?"
+    signup: "Đăng ký"
+    remember: "Ghi nhớ mật khẩu"
+    email: "địa chỉ email"
+    password: "Mật Khẩu"
+    or: "Hoặc"
+    facebook: "Đăng nhập bằng Facebook"
+    google: "Đăng nhập bằng  Google"
+  flash:
+    invalid: "Sai email hoặc mật khẩu"
