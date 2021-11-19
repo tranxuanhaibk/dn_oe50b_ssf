@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DnOe50bSsf</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= yield(:title) %> | <%= yield(:base_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= link_to t("en"), locale: :en %>
+    <%= link_to t("vi"), locale: :vi %>
+    <%= render "layouts/header" %>
+    <div class="container">
+      <div class="row">
+        <%= render "layouts/address" %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

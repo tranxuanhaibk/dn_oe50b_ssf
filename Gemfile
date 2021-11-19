@@ -2,6 +2,14 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
+
+gem "bootstrap", "~> 4.5.0"
+gem "execjs"
+gem "jquery-rails"
+gem "bcrypt", "3.1.13"
+gem "faker"
+gem "mini_racer", "~> 0.3.1"
+gem "config"
 gem "mysql2", ">= 0.4.4"
 gem "rails", "~> 6.1.4", ">= 6.1.4.1"
 gem "sqlite3", "~> 1.4"
