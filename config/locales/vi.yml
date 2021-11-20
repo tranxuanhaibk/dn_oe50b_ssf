@@ -1,4 +1,15 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác Nhận Mật Khẩu"
+  user_controller:
+      create_success: "Tạo Tài Khoản Thành Công"
+      create_fail: "Tạo Tài Khoản Thất Bại"
+      user_not_found: "Không tìm thấy người dùng"
+      check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
   base:
     title: "Đặt sân bóng Sun*"
     name: "Sân bóng đá"
@@ -24,6 +35,8 @@ vi:
     price: "Giá tiền"
   login:
     name: "Đăng nhập"
+  sign_up:
+    name: "Đăng ký"
   detail:
     choose: "Chọn sân"
     date: "Ngày"
@@ -41,3 +54,13 @@ vi:
     cl: "Quận Cẩm Lệ"
     hv: "Huyện Hoà Vang"
     hs: "Quần đảo Hoàng Sa"
+  users:
+    new:
+      title: "Đăng kí"
+      h1: "Đăng kí"
+      confirmation: "Xác Nhận Mật Khẩu"
+      createAccount: "Tạo Tài Khoản"
+  shared:
+    error_messages:
+      contains: The form contains %{errors}
+      error: "error"
