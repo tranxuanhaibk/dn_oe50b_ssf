@@ -8,3 +8,5 @@ model:
 helper:
   avatar:
     size: 80
+link_expired:
+  hours_2: 2
