@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem "validates_timeliness", "~> 6.0.0.alpha1"
 gem "bootstrap", "~> 4.5.0"
 gem "execjs"
 gem "jquery-rails"
