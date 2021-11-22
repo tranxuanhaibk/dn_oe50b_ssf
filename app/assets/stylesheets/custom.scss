@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "font-awesome";
 $white-color: #fff;
 $blue-light: #47649F;
 $gray: #AFB4BD;
@@ -226,6 +226,9 @@ textarea {
 }
 .center {
   text-align: center;
+}
+.center h1 {
+  margin-bottom: 10px;
 }
 
 /* header */
