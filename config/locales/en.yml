@@ -1,4 +1,15 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        email: "Email address"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+  user_controller:
+      create_success: "Create Success"
+      create_fail: " Create Account Failed"
+      user_not_found: "User not found"
+      check_email: "Please check your email to activate your account."
   base:
     title: "Sun* soccer fields"
     name: "Soccer Field"
@@ -24,6 +35,8 @@ en:
     price: "Price"
   login:
     name: "Login"
+  sign_up:
+    name: "Register"
   detail:
     choose: "Choose the yard"
     date: "Date"
@@ -41,3 +54,13 @@ en:
     cl: "Cam Le District"
     hv: "Hoa Vang District"
     hs: "Hoang Sa Archipelago"
+  users:
+    new:
+      title: "Register"
+      h1: "Register"
+      confirmation: "Password Confirmation"
+      createAccount: "Create Account"
+  shared:
+    error_messages:
+      contains: The form contains %{errors}
+      error: "error"

@@ -5,3 +5,7 @@ model:
   profile:
     length_digit_50: 50
     ength_digit_255: 255
+helper:
+  avatar:
+    size: 80
+
