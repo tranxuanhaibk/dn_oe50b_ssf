@@ -1,11 +1,53 @@
-<% provide :title, @user.email %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-      </h1>
-    </section>
-     <%= @user.email %>
-  </aside>
+<% provide(:title, @user.name) %>
+<div class="col-lg-9">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h3 class="font-weight-bold">
+            <%= @user.name %>
+          </h3>
+          <%= link_to "Chi tiết người dùng", "#" %>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+            <p class="nav-link active font-weight-bold"><%= t("users.show.about") %> </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="font-weight-bold"><%= t "users.show.email" %> :</label>
+              </div>
+              <div class="col-md-6">
+                <p class="font-weight-bold" ><%= @user.email %></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="font-weight-bold"><%= t "users.show.phone" %> :</label>
+              </div>
+              <div class="col-md-6">
+                <p class="font-weight-bold" ><%= @user.phone %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
