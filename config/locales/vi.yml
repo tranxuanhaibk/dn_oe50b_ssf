@@ -15,6 +15,8 @@ vi:
     create_fail: "Tạo tài khoản thất bại"
     user_not_found: "Không tìm thấy người dùng"
     check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+    Profile_updated: "Hồ sơ cá nhân đã cập nhật"
+    edit_fail: "chỉnh sửa không thành công"
   account_activations_controller:
     account_activate: "Tài khaorn đã kích hoạt!"
     account_danger: "Link kích hoạt sai!"
@@ -82,6 +84,9 @@ vi:
       unsuccess: " Tạo tài khoản không thành công"
   users:
     edit:
+      title: "Cập nhật hồ sơ"
+      h1_html: "Cập nhật hồ sơ"
+      updateAccount: "Cập nhật tài khoản"
       save_changes: "Lưu thay đổi"
       h1: "Mẫu chỉnh sửa"
     form:
@@ -99,6 +104,10 @@ vi:
       name: "Tên người dùng"
       mail: "Địa chỉ Email"
       phone: "Số điện thoại"
+      title: "Đăng ký"
+      h1: "Đăng kí"
+      confirmation: "Xác nhận mật khẩu"
+      createAccount: "Tạo tài khoản"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -155,3 +164,10 @@ vi:
     manager_user: "Quản lý người dùng"
     manager_revenue: "Quản lý doanh thu"
     manager_field: "Quản lý sân"
+  layouts:
+    header:
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      account: "Tài khoản"
+      logout: "Đăng xuất"
+

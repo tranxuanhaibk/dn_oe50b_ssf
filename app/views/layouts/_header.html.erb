@@ -19,13 +19,13 @@
         <% if logged_in? %>
           <div class="dropdown show">
           <%= link_to "#", {class: "btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
-            <%= t "home.account" %>
+            <%= t ".account" %>
             <b class="caret"></b>
           <% end %>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <%= link_to t("home.profile"), current_user, class: "dropdown-item" %>
-            <%= link_to t("home.setting"), edit_user_path(current_user), class: "dropdown-item" %>
-            <%= button_to t("home.logout"), logout_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to t(".profile"), current_user, class: "dropdown-item" %>
+            <%= link_to t(".setting"), edit_user_path(current_user), class: "dropdown-item" %>
+            <%= button_to t(".logout"), logout_path, method: :delete, class: "dropdown-item" %>
           </div>
         </div>
         <% else %>

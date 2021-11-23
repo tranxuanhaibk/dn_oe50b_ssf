@@ -15,6 +15,8 @@ en:
     create_fail: " Create Account Failed"
     user_not_found: "User not found"
     check_email: "Please check your email to activate your account."
+    Profile_updated: "Profile update"
+    edit_fail: "edit_fail"
   account_activations_controller:
     account_activate: "Account activated!"
     account_danger: "Invalid activation link"
@@ -87,6 +89,9 @@ en:
       unsuccess: " Create Account Unsuccess"
   users:
     edit:
+      title: "Update Profile"
+      h1_html: "Update Profile"
+      updateAccount: "Update Account"
       save_changes: "Save change"
       h1: "Edit Form"
     form:
@@ -104,6 +109,10 @@ en:
       name: "Name"
       mail: "Email"
       phone: "Number phone"
+      title: "Register"
+      h1: "Register"
+      confirmation: "Password Confirmation"
+      createAccount: "Create Account"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -160,3 +169,10 @@ en:
     manager_user: "Manager user"
     manager_revenue: "Manager revenue"
     manager_field: "Manager field"
+  layouts:
+    header:
+      profile: "Profile"
+      settings: "Settings"
+      account: "Account"
+      logout: "Logout"
+

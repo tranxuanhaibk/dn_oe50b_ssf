@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
       redirect_back_or user
     else
       flash[:warning] = t "flash.warning"
-      edirect_to root_url
+      redirect_to root_url
     end
   end
 end

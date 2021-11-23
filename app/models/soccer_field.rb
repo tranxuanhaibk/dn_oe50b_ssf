@@ -3,11 +3,11 @@ class SoccerField < ApplicationRecord
   has_many :soccer_rates, dependent: :destroy
 
   validates :field_name, length:
-                         {maximum: Settings.model.profile.length_digit_50},
+                         {maximum: Settings.model.profile.name_length_max_50},
                          allow_blank: true
   validates :type, numericality: {only_integer: true}
   validates :address, length:
-                      {maximum: Settings.model.profile.length_digit_255},
+                      {maximum: Settings.model.profile.length_max_255},
                       allow_blank: true
   enum status: {left: 0, over: 1}
   validates :price, numericality: {only_integer: true,
