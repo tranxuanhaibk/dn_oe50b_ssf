@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates :password,  length: {minimum: Settings.model.user.password_min},
                         presence: true,
                         allow_blank: true
+
   enum role: {user: 0, admin: 1}
   has_secure_password
 
@@ -29,7 +30,21 @@ class User < ApplicationRecord
   end
 
   def forget
-    update_attribute(:remember_digest, nil)
+    update_column :remember_digest, nil
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                               reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.link_expired.hours_2.hours.ago
   end
 
   class << self

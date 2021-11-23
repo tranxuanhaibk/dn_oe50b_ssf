@@ -27,6 +27,9 @@ vi:
     previous: "Trước"
     next: "Sau"
     number_fields: "Sân bóng số "
+  title:
+    password_forgot: "Quên mật khẩu"
+    password_reset: "Đặt lại mật khẩu"
   booking:
     booking_fields: "Đặt sân"
     cancel_fields: "Hủy bỏ"
@@ -74,7 +77,8 @@ vi:
       conrains: "Biểu mẫu chứa %{errors}"
       error: "lỗi"
   assession:
-    show: "Không tìm thấy người dùng"
+    show:
+      warning: "Không tìm thấy người dùng"
   sessions:
     title: "Đăng Nhập"
     h1: "Đăng Nhập"
@@ -92,3 +96,31 @@ vi:
     warning: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của
               bạn để biết liên kết kích hoạt."
 
+  form:
+    session:
+      password: "Mật khẩu"
+      forgot_password: "Quên mật khẩu"
+    password_reset:
+      submit: "Gửi"
+      submit_change: "Tạo mật khẩu"
+      new_password: "Mật khẩu mới"
+      password_confirmation: "Nhập lại mật khẩu mới"
+  password_resets:
+    create:
+      info: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      danger: "Không tìm thấy địa chỉ email"
+    load_user:
+      danger: "Không tìm thấy địa chỉ email"
+    valid_user:
+      danger_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+      danger_activated: "Liên kết không hợp lệ"
+    check_expiration:
+      danger: "Đặt lại mật khẩu đã hết hạn."
+    update:
+      error_blank: "Không được rỗng"
+      success: "Mật khẩu đã được thay đổi"
+    html:
+      text_link: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+      text_expire: "Liên kết này sẽ hết hạn trong"
+      hours: "giờ"
+      text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ." 
