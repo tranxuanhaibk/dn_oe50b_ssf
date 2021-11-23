@@ -10,6 +10,11 @@ vi:
       create_fail: "Tạo Tài Khoản Thất Bại"
       user_not_found: "Không tìm thấy người dùng"
       check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+  account_activations_controller:
+    account_activate: "Tài khoản đã được kích hoạt!"
+    account_danger: "Liên kết kích hoạt không hợp lệ"
+  user_mailer:
+    activate: "Kích hoạt tài khoản"
   base:
     title: "Đặt sân bóng Sun*"
     name: "Sân bóng đá"
@@ -60,12 +65,10 @@ vi:
       unsuccess: " Tạo tài khoản không thành công"
   users:
     new:
-      newu:
-        title: "Đăng ký"
-        h1: "Đăng kí"
-        confirmation: "Xác nhận mật khẩu"
-        phone: "Số điện thoại"
-        createAccount: "Tạo tài khoản"
+      title: "Đăng ký"
+      h1: "Đăng kí"
+      confirmation: "Xác nhận mật khẩu"
+      createAccount: "Tạo tài khoản"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -86,3 +89,6 @@ vi:
     google: "Đăng nhập bằng  Google"
   flash:
     invalid: "Sai email hoặc mật khẩu"
+    warning: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của
+              bạn để biết liên kết kích hoạt."
+
