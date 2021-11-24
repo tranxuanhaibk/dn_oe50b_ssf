@@ -8,13 +8,14 @@ Rails.application.routes.draw do
     post "/signup", to: "users#create"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
-    resources :users
+    get "/logout", to: "sessions#destroy"
     resources :account_activations, only: :edit
+    resources :users
     resources :password_resets, only: %i(new create edit update)
 
     namespace :admin do
-      resources :soccer_fields, only: %i(index new create)
+      resources :soccer_fields, except: %i(show)
+      get "/soccer_field_path/:id", to: "soccer_fields#destroy"
     end
   end
 end

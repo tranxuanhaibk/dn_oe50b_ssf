@@ -2,13 +2,14 @@
   <td> <%= soccer_field.field_name %> </td>
   <td> <%= soccer_field.type_field %> </td>
   <td> <%= soccer_field.address %> </td>
-  <td class="text-info">  <%= soccer_field.status %></p> </td>
+  <td class="text-info"> <%= soccer_field.status %></p> </td>
   <td> <%= soccer_field.price %> </td>
   <td>
-    <%= link_to "#" ,class: "btn btn-primary" do %>
+    <%= link_to edit_admin_soccer_field_path(soccer_field.id) ,class: "btn btn-primary" do %>
       <i class="fa fa-pencil-square" aria-hidden="true"></i>
     <% end %>
-    <%= link_to "#", class: "btn btn-danger" do %>
+    <%= link_to admin_path(soccer_field.id), method: :delete,
+        data: { confirm: t("users.user.alert_delete") }, class: "btn btn-danger" do %>
       <i class="fa fa-trash" aria-hidden="true"></i>
     <% end %>
   </td>
