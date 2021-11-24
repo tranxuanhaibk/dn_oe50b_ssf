@@ -8,4 +8,4 @@ $(document).ready(function() {
       $('.comment-child').hide()
     }
   })
-}
+})

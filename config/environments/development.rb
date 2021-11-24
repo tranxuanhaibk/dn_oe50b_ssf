@@ -32,7 +32,6 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true
   }
-
   config.action_mailer.perform_caching = false
   config.active_support.deprecation = :log
   config.active_support.disallowed_deprecation = :raise

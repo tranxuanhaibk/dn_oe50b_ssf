@@ -1,4 +1,6 @@
 vi:
+  eng: "Tiếng anh"
+  vie: "Tiếng việt"
   activerecord:
     attributes:
       user:
@@ -6,30 +8,42 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác Nhận Mật Khẩu"
   user_controller:
-      create_success: "Tạo Tài Khoản Thành Công"
-      create_fail: "Tạo Tài Khoản Thất Bại"
-      user_not_found: "Không tìm thấy người dùng"
-      check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+    destroy:
+      success: "Xóa người dùng thành công"
+      danger: "Xóa người dùng thất bạt"
+    create_success: "Tạo tài khoản thành công"
+    create_fail: "Tạo tài khoản thất bại"
+    user_not_found: "Không tìm thấy người dùng"
+    check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
   account_activations_controller:
-    account_activate: "Tài khoản đã được kích hoạt!"
-    account_danger: "Liên kết kích hoạt không hợp lệ"
-  user_mailer:
-    activate: "Kích hoạt tài khoản"
+    account_activate: "Tài khaorn đã kích hoạt!"
+    account_danger: "Link kích hoạt sai!"
   base:
-    title: "Đặt sân bóng Sun*"
-    name: "Sân bóng đá"
+    title: "Sân bóng Sun*"
+    name: "Sân bóng Sun*"
     location: "Vị trí"
     cancel: "Hủy bỏ"
   home:
+    log_in: "Đăng nhập"
+    sign_up: "Đăng ký"
     name: "Trang chủ"
     address: "Địa chỉ: "
     phone: "Số điện thoại: "
     previous: "Trước"
     next: "Sau"
-    number_fields: "Sân bóng số "
+    option: "Tùy chọn"
+    description: "Đặc tả"
+    save: "Lưu"
+    account: "Tài khoản"
+    profile: "Người dùng"
+    setting: "Cài đặt"
+    logout: "Đăng xuất"
+    user: "Người dùng"
   title:
     password_forgot: "Quên mật khẩu"
     password_reset: "Đặt lại mật khẩu"
+    edit: "Chỉnh sửa"
+    sign_up: "Đăng ký"
   booking:
     booking_fields: "Đặt sân"
     cancel_fields: "Hủy bỏ"
@@ -67,11 +81,24 @@ vi:
       success: "Tạo tài khoản thành công"
       unsuccess: " Tạo tài khoản không thành công"
   users:
+    edit:
+      save_changes: "Lưu thay đổi"
+      h1: "Mẫu chỉnh sửa"
+    form:
+      name: "Tên người dùngs"
+      email: "Địa chỉ Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      phone: "Số điện thoại"
     new:
-      title: "Đăng ký"
-      h1: "Đăng kí"
-      confirmation: "Xác nhận mật khẩu"
-      createAccount: "Tạo tài khoản"
+      create_account: "Tạo tài khoản"
+      h1: "Đăng ký"
+    show:
+      about: "Về tôi"
+      user_id: "ID"
+      name: "Tên người dùng"
+      mail: "Địa chỉ Email"
+      phone: "Số điện thoại"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -93,9 +120,7 @@ vi:
     google: "Đăng nhập bằng  Google"
   flash:
     invalid: "Sai email hoặc mật khẩu"
-    warning: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của
-              bạn để biết liên kết kích hoạt."
-
+    warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
   form:
     session:
       password: "Mật khẩu"
@@ -124,3 +149,9 @@ vi:
       text_expire: "Liên kết này sẽ hết hạn trong"
       hours: "giờ"
       text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ." 
+  admin:
+    manager_title: "Quản lý Sân bóng Sun*"
+    manager_booking_field: "Quản lý đơn đặt sân"
+    manager_user: "Quản lý người dùng"
+    manager_revenue: "Quản lý doanh thu"
+    manager_field: "Quản lý sân"
