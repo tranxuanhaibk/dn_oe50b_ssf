@@ -186,57 +186,52 @@ body{
 .box-booking {
   padding: 5px;
 }
-
 .box-booking .head {
   padding: 90px 0 0 10px;
 }
-
 .box-booking .content {
   padding: 8px;
 }
-
 .table-booking, th, td {
   border: 1px solid $gray;
   border-collapse: collapse;
 }
-
 .table-booking {
   width: 100%;
 }
-
 .table-booking th {
   width: 10%;
 }
-
 th, td {
   text-align: center;
 }
-
 th:nth-child(1) span {
   cursor: pointer;
 }
-
 td:nth-child(2) {
   height: 100px;
 }
-
 td:nth-child(2) .box-img {
   border: 1px solid;
   width: 90px;
   height: 90px;
   margin: 0 auto;
 }
-
 .box-booking .footer-booking .total {
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px 0 0;
 }
-
 .box-booking .footer-booking .booking {
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
+}
+.box-img img{
+  height: 81px;
+  width: 99%;
+  vertical-align: middle;
+  border-style: none;
 }
 
 /* universal */

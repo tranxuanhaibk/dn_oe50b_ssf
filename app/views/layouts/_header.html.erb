@@ -1,7 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <%= link_to t("base.name"), home_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <li class="nav-item col-md-3">
+      <%= link_to t("eng"), locale: :en, class: "nav-link" %>
+      <%= link_to t("vie"), locale: :vi, class: "nav-link" %>
+    </li>
+    <h3><%= link_to t("base.name"), home_path, class: "navbar-brand font-weight-bold" %></h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -12,10 +17,6 @@
         <li class="nav-item">
           <%= link_to t("booking.booking_fields"), order_path, class: "nav-link" %>
         </li>
-        <li class="nav-item nav-link">
-          <%= link_to t("eng"), locale: :en, class: "nav-link" %>
-          <%= link_to t("vie"), locale: :vi, class: "nav-link" %>
-        </li>
         <% if logged_in? %>
           <div class="dropdown show">
           <%= link_to "#", {class: "btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
@@ -23,9 +24,9 @@
             <b class="caret"></b>
           <% end %>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <%= link_to t(".profile"), current_user, class: "dropdown-item" %>
-            <%= link_to t(".setting"), edit_user_path(current_user), class: "dropdown-item" %>
-            <%= button_to t(".logout"), logout_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to t("home.profile"), current_user, class: "dropdown-item" %>
+            <%= link_to t("home.setting"), edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to t("home.logout"), logout_path,method: :delete, class: "dropdown-item" %>
           </div>
         </div>
         <% else %>

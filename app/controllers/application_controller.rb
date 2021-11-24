@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     return if logged_in?
 
     store_location
-    flash[:danger] = t "logged_in_user.danger"
+    flash[:danger] = t ".danger"
     redirect_to login_path
   end
 
@@ -25,5 +25,12 @@ class ApplicationController < ActionController::Base
     log_in user
     params[:session][:remember_me] == "1" ? remember(user) : forget(user)
     redirect_back_or user
+  end
+
+  def check_admin
+    return if current_user.admin?
+
+    flash[:warning] = t ".warning"
+    redirect_to root_path
   end
 end

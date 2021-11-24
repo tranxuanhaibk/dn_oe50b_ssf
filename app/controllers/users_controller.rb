@@ -1,9 +1,16 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, :load_user, except: %i(new create)
+  before_action :logged_in_user, except: %i(new create)
+  before_action :load_user, except: %i(index new create)
   before_action :correct_user, only: %i(edit update)
+  before_action :check_admin, only: :destroy
 
   def new
     @user = User.new
+  end
+
+  def index
+    @users = User.paginate page: params[:page],
+       per_page: Settings.per_page.users
   end
 
   def show; end
@@ -12,34 +19,31 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = t "user_controller.check_email"
+      flash[:info] = t ".info"
       redirect_to root_url
     else
-      flash[:warning] = t "user_controller.create_fail"
+      flash[:warning] = t ".warning"
       render :new
     end
   end
 
-  def edit
-    load_user
-  end
+  def edit; end
 
   def update
-    load_user
     if @user.update user_params
-      flash[:success] = t "user_controller.Profile_updated"
+      flash[:success] = t ".success"
       redirect_to @user
     else
-      flash[:warning] = t "user_controller.edit_fail"
+      flash.now[:danger] = t ".danger"
       render :edit
     end
   end
 
   def destroy
     if @user&.destroy
-      flash[:success] = t "users_control.destroy.success"
+      flash[:success] = t ".success"
     else
-      flash[:danger] = t "users_control.destroy.danger"
+      flash[:danger] = t ".danger"
     end
     redirect_to users_url
   end
@@ -53,14 +57,17 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    redirect_to(root_url) unless current_user?(@user)
+    return if current_user?(@user)
+
+    flash[:danger] = t ".danger"
+    redirect_to root_url
   end
 
   def load_user
     @user = User.find_by id: params[:id]
     return if @user.present?
 
-    flash[:warning] = t "user_controller.user_not_found"
+    flash[:warning] = t ".warning"
     redirect_to root_url
   end
 end

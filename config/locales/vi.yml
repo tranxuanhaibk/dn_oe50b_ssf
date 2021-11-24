@@ -7,18 +7,17 @@ vi:
         email: "Địa chỉ email"
         password: "Mật khẩu"
         password_confirmation: "Xác Nhận Mật Khẩu"
+  application:
+    check_admin:
+      warning: "Bạn không phải quản trị viên!"
+    logged_in_user:
+      danger: "Vui lòng đăng nhập!"
   user_controller:
-    destroy:
-      success: "Xóa người dùng thành công"
-      danger: "Xóa người dùng thất bạt"
-    create_success: "Tạo tài khoản thành công"
-    create_fail: "Tạo tài khoản thất bại"
-    user_not_found: "Không tìm thấy người dùng"
     check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     Profile_updated: "Hồ sơ cá nhân đã cập nhật"
     edit_fail: "chỉnh sửa không thành công"
   account_activations_controller:
-    account_activate: "Tài khaorn đã kích hoạt!"
+    account_activate: "Tài khoản đã kích hoạt!"
     account_danger: "Link kích hoạt sai!"
   base:
     title: "Sân bóng Sun*"
@@ -46,6 +45,7 @@ vi:
     password_reset: "Đặt lại mật khẩu"
     edit: "Chỉnh sửa"
     sign_up: "Đăng ký"
+    all_users: "Tất cả người dùng"
   booking:
     booking_fields: "Đặt sân"
     cancel_fields: "Hủy bỏ"
@@ -83,6 +83,10 @@ vi:
       success: "Tạo tài khoản thành công"
       unsuccess: " Tạo tài khoản không thành công"
   users:
+    user:
+      delete: "Xóa"
+      edit: "Sửa"
+      alert_delete: "Bạn chắc chắn muốn xóa chưa?"
     edit:
       title: "Cập nhật hồ sơ"
       h1_html: "Cập nhật hồ sơ"
@@ -108,6 +112,19 @@ vi:
       h1: "Đăng kí"
       confirmation: "Xác nhận mật khẩu"
       createAccount: "Tạo tài khoản"
+    destroy:
+      success: "Xóa người dùng thành công"
+      danger: "Xóa người dùng thất bại"
+    update:
+      success: "Cập nhật người dùng thành công"
+      danger: "Cập nhật người dùng thất bại!"
+    create:
+      info: "Tạo người dùng thành công"
+      warning: "Tạo tài khoản thất bại"
+    correct_user:
+      danger: "Sai người dùng!"
+    load_user:
+      warning: "Không tìm thấy người dùng"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -127,8 +144,9 @@ vi:
     or: "Hoặc"
     facebook: "Đăng nhập bằng Facebook"
     google: "Đăng nhập bằng  Google"
-  flash:
+  create:
     invalid: "Sai email hoặc mật khẩu"
+  check_activated:
     warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
   form:
     session:
