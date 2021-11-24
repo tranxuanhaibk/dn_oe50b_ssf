@@ -12,6 +12,9 @@ vi:
       warning: "Bạn không phải quản trị viên!"
     logged_in_user:
       danger: "Vui lòng đăng nhập!"
+  soccer_fields_controller:
+    create_success: "Thêm sân đá bóng vào thành công"
+    create_warning: "Thêm sân đá bóng vào không thành công"
   user_controller:
     check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     Profile_updated: "Hồ sơ cá nhân đã cập nhật"
@@ -56,11 +59,17 @@ vi:
     sign_up: "Đăng ký"
     all_users: "Tất cả người dùng"
   booking:
+    action: "Chức Năng"
     soccer_field_name: "Tên sân bóng"
     soccer_type: "Loại Sân"
     soccer_address: "Địa chỉ sân"
     soccer_status: "Trạng thái sân bóng"
     soccer_price: "Giá sân bóng"
+    field_name: "Tên sân bóng"
+    type_field: "Loại Sân"
+    address: "Địa chỉ sân"
+    soccer_status: "Trạng thái sân bóng"
+    price: "Giá sân bóng"
     booking_fields: "Đặt sân"
     cancel_fields: "Hủy bỏ"
     fields_name: "Tên sân"

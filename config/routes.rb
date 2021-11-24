@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :password_resets, only: %i(new create edit update)
 
     namespace :admin do
-      resources :soccer_fields, only: :index
+      resources :soccer_fields, only: %i(index new create)
     end
   end
 end
