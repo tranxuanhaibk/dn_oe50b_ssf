@@ -19,6 +19,13 @@ en:
   account_activations_controller:
     account_activate: "Account activated!"
     account_danger: "Invalid activation link"
+  admin_controller:
+    message:
+      pls_login: "You must be logged in to use the system."
+      is_admin: "You are not an admin so you cannot use this function."
+  application_controller:
+    log_in:
+      danger: "Please login !"
   user_mailer:
     activate: "Account activation"
     hi: "Hi"
@@ -52,6 +59,11 @@ en:
     edit: "Edit"
     all_users: "All users"
   booking:
+    soccer_field_name: "soocer_field_name"
+    soccer_type: "soccer_type"
+    soccer_address: "soccer_address"
+    soccer_status: "soccer_status"
+    soccer_price: "soccer_price"
     booking_fields: "Booking"
     cancel_fields: "Cancel"
     fields_name: "Fields Name"
@@ -60,6 +72,8 @@ en:
     date: "Date"
     time: "Time"
     total: "Total:"
+    new: "new"
+    edit: "update"
     delete: "delete"
     price: "Price"
   login:
@@ -132,7 +146,7 @@ en:
       warning: "User not found"
   shared:
     error_messages:
-      conrains: "Biểu mẫu chứa %{errors}"
+      contains: "Biểu mẫu chứa %{errors}"
       error: "Lỗi"
   asession:
     show:
@@ -180,7 +194,7 @@ en:
       text_link: "To reset your password click the link below:"
       text_expire: "This link will expire"
       hours: "hours"
-      text_body: "If you did not request your password to be reset, please ignore this email and your password will stay as it is." 
+      text_body: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   admin:
     manager_title: "Manager Soccer Fields Sun*"
     manager_booking_field: "Manager booking field"
@@ -193,4 +207,11 @@ en:
       settings: "Settings"
       account: "Account"
       logout: "Logout"
+  admin:
+    manager_title: "Manager Soccer Fields Sun*"
+    manager_booking_field: "Manager booking field"
+    manager_user: "Manager user"
+    manager_revenue: "Manager revenue"
+    manager_field: "Manager field"
+
 

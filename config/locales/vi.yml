@@ -17,8 +17,17 @@ vi:
     Profile_updated: "Hồ sơ cá nhân đã cập nhật"
     edit_fail: "chỉnh sửa không thành công"
   account_activations_controller:
-    account_activate: "Tài khoản đã kích hoạt!"
-    account_danger: "Link kích hoạt sai!"
+    account_activate: "Tài khoản đã được kích hoạt!"
+    account_danger: "Liên kết kích hoạt không hợp lệ"
+  admin_controller:
+    message:
+      pls_login: "Bạn phải đăng nhập để sử dụng hệ thống."
+      is_admin: "Bạn không phải là quản trị viên nên bạn không thể sử dụng chức năng này."
+  application_controller:
+    log_in:
+      danger: "Xin vui lòng đăng nhập !"
+  user_mailer:
+    activate: "Kích hoạt tài khoản"
   base:
     title: "Sân bóng Sun*"
     name: "Sân bóng Sun*"
@@ -47,6 +56,11 @@ vi:
     sign_up: "Đăng ký"
     all_users: "Tất cả người dùng"
   booking:
+    soccer_field_name: "Tên sân bóng"
+    soccer_type: "Loại Sân"
+    soccer_address: "Địa chỉ sân"
+    soccer_status: "Trạng thái sân bóng"
+    soccer_price: "Giá sân bóng"
     booking_fields: "Đặt sân"
     cancel_fields: "Hủy bỏ"
     fields_name: "Tên sân"
@@ -55,6 +69,8 @@ vi:
     date: "Ngày"
     time: "Thời gian"
     total_cost: "Tổng cộng:"
+    new: "Thêm"
+    edit: "Sửa"
     delete: "Xóa"
     price: "Giá tiền"
   login:
@@ -127,7 +143,7 @@ vi:
       warning: "Không tìm thấy người dùng"
   shared:
     error_messages:
-      conrains: "Biểu mẫu chứa %{errors}"
+      contains: "Biểu mẫu chứa %{errors}"
       error: "lỗi"
   assession:
     show:
@@ -175,7 +191,7 @@ vi:
       text_link: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
       text_expire: "Liên kết này sẽ hết hạn trong"
       hours: "giờ"
-      text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ." 
+      text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."
   admin:
     manager_title: "Quản lý Sân bóng Sun*"
     manager_booking_field: "Quản lý đơn đặt sân"
@@ -188,4 +204,11 @@ vi:
       settings: "Cài đặt"
       account: "Tài khoản"
       logout: "Đăng xuất"
+  admin:
+    manager_title: "Quản lý Sân bóng Sun*"
+    manager_booking_field: "Quản lý đơn đặt sân"
+    manager_user: "Quản lý người dùng"
+    manager_revenue: "Quản lý doanh thu"
+    manager_field: "Quản lý sân"
+
 

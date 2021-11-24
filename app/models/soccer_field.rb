@@ -1,11 +1,11 @@
 class SoccerField < ApplicationRecord
   has_many :order_details, dependent: :destroy
   has_many :soccer_rates, dependent: :destroy
-
+  scope :order_by_field_name, ->{order :field_name}
   validates :field_name, length:
                          {maximum: Settings.model.profile.name_length_max_50},
                          allow_blank: true
-  validates :type, numericality: {only_integer: true}
+  validates :type_field, numericality: {only_integer: true}
   validates :address, length:
                       {maximum: Settings.model.profile.length_max_255},
                       allow_blank: true

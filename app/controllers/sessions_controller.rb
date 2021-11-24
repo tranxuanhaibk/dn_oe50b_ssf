@@ -17,6 +17,8 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
+  private
+
   def check_activated user
     if user.activated
       log_in user
