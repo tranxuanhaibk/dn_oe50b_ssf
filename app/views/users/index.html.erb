@@ -1,0 +1,14 @@
+<% provide :title, t("title.all_users") %>
+<div class = "col-lg-9" >
+  <div class = "justify-content-center">
+    <h1 class = "text-center"><%= t "title.all_users" %></h1>
+  </div>
+  <div>
+    <ul class="users">
+      <%= render @users %>
+    </ul>
+    <div class = "col-lg-6">
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

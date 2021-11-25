@@ -7,13 +7,12 @@ en:
         email: "Email address"
         password: "Password"
         password_confirmation: "Password Confirmation"
+  application:
+    check_admin:
+      warning: "You not admin!"
+    logged_in_user:
+      danger: "Please login!"
   user_controller:
-    destroy:
-      success: "Delete user successed"
-      danger: "Delete user failed"
-    create_success: "Create Success"
-    create_fail: " Create Account Failed"
-    user_not_found: "User not found"
     check_email: "Please check your email to activate your account."
     Profile_updated: "Profile update"
     edit_fail: "edit_fail"
@@ -51,6 +50,7 @@ en:
     password_reset: "Password reset"
     sign_up: "Sign up"
     edit: "Edit"
+    all_users: "All users"
   booking:
     booking_fields: "Booking"
     cancel_fields: "Cancel"
@@ -88,6 +88,10 @@ en:
       success: "Create Success"
       unsuccess: " Create Account Unsuccess"
   users:
+    user:
+      delete: "Delete"
+      edit: "Edit"
+      alert_delete: "You sure?"
     edit:
       title: "Update Profile"
       h1_html: "Update Profile"
@@ -113,6 +117,19 @@ en:
       h1: "Register"
       confirmation: "Password Confirmation"
       createAccount: "Create Account"
+    destroy:
+      success: "Delete user successed"
+      danger: "Delete user failed"
+    update:
+      success: "Update user successed"
+      danger: "Update user failed"
+    create:
+      info: "Create Success"
+      warning: "Create Account Failed"
+    correct_user:
+      danger: "Wrong user!"
+    load_user:
+      warning: "User not found"
   shared:
     error_messages:
       conrains: "Biểu mẫu chứa %{errors}"
@@ -132,8 +149,9 @@ en:
     or: "OR"
     facebook: "Sign in with Facebook"
     google: "Sign in with Google"
-  flash:
+  create:
     invalid: "Invalid email/password combination"
+  check_activated:
     warning: "Account not activated. Check your email for the activation link."
   form:
     session:

@@ -12,3 +12,5 @@ helper:
     size: 80
 link_expired:
   hours_2: 2
+per_page:
+  users: 10

@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
-gem "will_paginate", "~> 3.3"
+gem "will_paginate", ">= 3.3.0"
+gem "will_paginate-bootstrap4"
 gem "validates_timeliness", "~> 6.0.0.alpha1"
 gem "bootstrap", "~> 4.5.0"
 gem "execjs"

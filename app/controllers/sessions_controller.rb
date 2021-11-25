@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user&.authenticate params[:session][:password]
       check_activated user
     else
-      flash.now[:danger] = t "flash.invalid"
+      flash.now[:danger] = t ".invalid"
       render :new
     end
   end
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_back_or user
     else
-      flash[:warning] = t "flash.warning"
+      flash[:warning] = t ".warning"
       redirect_to root_url
     end
   end
