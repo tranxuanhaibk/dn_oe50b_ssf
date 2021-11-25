@@ -20,13 +20,17 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    load_user
+  end
 
   def update
-    if @user.update(user_params)
-      flash[:success] = t "users_control.update"
+    load_user
+    if @user.update user_params
+      flash[:success] = t "user_controller.Profile_updated"
       redirect_to @user
     else
+      flash[:warning] = t "user_controller.edit_fail"
       render :edit
     end
   end
@@ -44,7 +48,8 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user)
-          .permit(:name, :email, :password, :password_confirmation, :phone)
+          .permit(:email, :password, :password_confirmation,
+                  :name, :address, :country, :phone)
   end
 
   def correct_user

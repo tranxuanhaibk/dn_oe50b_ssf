@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_11_21_081352) do
 
-  create_table "order_details", force: :cascade do |t|
+  create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "order_id", null: false
     t.integer "soccer_field_id", null: false
     t.bigint "current_price"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.index ["soccer_field_id"], name: "index_order_details_on_soccer_field_id"
   end
 
-  create_table "orders", force: :cascade do |t|
+  create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "quantity"
     t.integer "status"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "soccer_fields", force: :cascade do |t|
+  create_table "soccer_fields", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "field_name"
     t.integer "type"
     t.bigint "price"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "soccer_rates", force: :cascade do |t|
+  create_table "soccer_rates", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "soccer_field_id", null: false
     t.text "comment"
@@ -57,12 +57,14 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.index ["user_id"], name: "index_soccer_rates_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "phone"
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "remember_digest"
+    t.string "name"
+    t.string "phone"
+    t.string "country"
+    t.string "address"
     t.integer "role"
     t.string "activation_digest"
     t.boolean "activated", default: false

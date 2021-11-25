@@ -1,11 +1,9 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   has_many :orders, dependent: :destroy
-  has_one :profile, dependent: :destroy
-  VALID_EMAIL_REGEX = /\A[\w\-.+]+@[a-z\-\d.]+\.[a-z]+\z/i.freeze
   before_save :downcase_email
   before_create :create_activation_digest
-  validates :email, format: {with: VALID_EMAIL_REGEX},
+  validates :email, format: {with: Settings.email_regex},
                     uniqueness: {case_sensitive: false},
                     length: {maximum: Settings.model.user.email_max},
                     presence: true,
@@ -13,7 +11,17 @@ class User < ApplicationRecord
   validates :password,  length: {minimum: Settings.model.user.password_min},
                         presence: true,
                         allow_blank: true
-
+  validates :name, length:
+                  {maximum: Settings.model.profile.name_length_max_50},
+                  allow_blank: true
+  validates :address, length:
+                  {maximum: Settings.model.profile.length_max_255},
+                  allow_blank: true
+  validates :country, length:
+                  {maximum: Settings.model.profile.length_max_255},
+                  allow_blank: true
+  validates :phone, presence: true, format: {with: Settings.phone_regex},
+                    allow_blank: true
   enum role: {user: 0, admin: 1}
   has_secure_password
 
