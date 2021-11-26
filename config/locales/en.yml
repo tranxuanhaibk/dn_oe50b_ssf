@@ -12,6 +12,9 @@ en:
       warning: "You not admin!"
     logged_in_user:
       danger: "Please login!"
+  soccer_fields_controller:
+    create_success: "Add soccer_fields success"
+    create_warning: "Add soccer_fields failed"
   user_controller:
     check_email: "Please check your email to activate your account."
     Profile_updated: "Profile update"
@@ -59,11 +62,17 @@ en:
     edit: "Edit"
     all_users: "All users"
   booking:
+    action: "action"
     soccer_field_name: "soocer_field_name"
     soccer_type: "soccer_type"
     soccer_address: "soccer_address"
     soccer_status: "soccer_status"
     soccer_price: "soccer_price"
+    field_name: "soocer_field_name:"
+    type_field: "soccer_type"
+    address: "soccer_address"
+    soccer_status: "soccer_status"
+    price: "soccer_price"
     booking_fields: "Booking"
     cancel_fields: "Cancel"
     fields_name: "Fields Name"

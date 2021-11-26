@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.string "field_name"
     t.integer "type_field"
     t.bigint "price"
-    t.integer "status"
+    t.integer "status", default: 0
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
