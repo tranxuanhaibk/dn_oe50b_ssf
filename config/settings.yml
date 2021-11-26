@@ -14,3 +14,7 @@ link_expired:
   hours_2: 2
 per_page:
   users: 10
+paginate:
+  home: 6
+  manage: 5
+

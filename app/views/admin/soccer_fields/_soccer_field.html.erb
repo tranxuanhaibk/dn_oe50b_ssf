@@ -1,0 +1,19 @@
+<tr>
+  <td> <%= soccer_field.field_name %> </td>
+  <td> <%= soccer_field.type_field %> </td>
+  <td> <%= soccer_field.address %> </td>
+  <td class="text-info">  <%= soccer_field.status %></p> </td>
+  <td> <%= soccer_field.price %> </td>
+  <td>
+    <%= link_to "#" ,class: "btn btn-primary" do %>
+      <i class="fa fa-pencil-square" aria-hidden="true">
+        <%= t("booking.edit")%>
+      </i>
+    <% end %>
+    <%= link_to "#", class: "btn btn-danger" do %>
+      <i class="fa fa-trash" aria-hidden="true">
+        <%= t("booking.delete")%>
+      </i>
+    <% end %>
+  </td>
+</tr>

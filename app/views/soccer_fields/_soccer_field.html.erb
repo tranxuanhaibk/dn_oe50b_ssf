@@ -1,0 +1,18 @@
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="card h-100">
+    <%= image_tag ( "/assets/anh03.jpg"),class: "card-img-top" %>
+    <div class="card-body">
+      <h4 class="card-title">
+        <%= link_to soccer_field.field_name, detail_path %>
+      </h4>
+      <p><%= t "booking.soccer_status" %> :<%= soccer_field.status %></p>
+      <h6><%= t "booking.soccer_type" %> :<%= soccer_field.type_field %></h6>
+      <p class="card-text"><%= t "booking.soccer_address" %> :<%= soccer_field.address %></p>
+      <p class="card-text"><%= t "booking.soccer_address" %> :<%= soccer_field.status %></p>
+      <p class="card-text"><%= t "booking.soccer_price" %> :<%= soccer_field.price %></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    </div>
+  </div>
+</div>

@@ -12,5 +12,9 @@ Rails.application.routes.draw do
     resources :users
     resources :account_activations, only: :edit
     resources :password_resets, only: %i(new create edit update)
+
+    namespace :admin do
+      resources :soccer_fields, only: :index
+    end
   end
 end
