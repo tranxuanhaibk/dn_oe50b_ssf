@@ -96,6 +96,11 @@ en:
     new_h1_html: "Add Soccer Field"
     edit_h1_html: "Update Soccer Field"
     comfirm_delete: "Are you sure ?"
+    status:
+      pending: "Pending"
+      accept: "Accept"
+      rejected: "Rejected"
+      cancel: "Cancel"
   login:
     name: "Login"
   sign_up:
@@ -166,8 +171,8 @@ en:
       warning: "User not found"
   shared:
     error_messages:
-      contains: "Biểu mẫu chứa %{errors}"
-      error: "Lỗi"
+      contains: "The form contains %{errors}"
+      error: "error"
   asession:
     show:
       warning: "No user found"

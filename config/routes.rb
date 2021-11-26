@@ -15,8 +15,13 @@ Rails.application.routes.draw do
     resources :password_resets, only: %i(new create edit update)
 
     namespace :admin do
-      resources :soccer_fields, except: %i(show)
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"
+      resources :soccer_fields,except: %i(show)
+      resources :orders, only: %i(index update)
+    end
+
+    namespace :user do
+      resources :orders, only: %i(index show create)
     end
   end
 end

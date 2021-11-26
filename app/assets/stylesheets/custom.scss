@@ -109,29 +109,23 @@ body{
   margin-left: 35px;
   outline: none;
 }
-
 .yard {
   margin: 10px 0;
 }
-
 .yard a {
   width: 60px;
 }
-
 .container-comment {
   padding-bottom: 30px;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
 }
-
 .post-footer .comment-input {
   border-radius: 20px;
   height: 45px;
 }
-
 .post-footer .submit-comment {
   border-radius: 6px;
   border: none;
@@ -144,31 +138,25 @@ body{
   align-self: flex-end;
   margin-top: 10px;
 }
-
 .post-footer .comment img {
   border-radius: 5px;
 }
-
 .media-body {
   position: relative;
 }
-
 .media-body .reply {
   color:  $blue-light;
   position: absolute;
   right: 30px;
   display: block;
 }
-
 .comment-child {
   padding: 10px 15px 10px 50px;
   display: none;
 }
-
 .comment-child .head h5 {
   display: inline-block;
 }
-
 .form-comment {
   display: flex;
   justify-content: flex-end;
@@ -177,7 +165,6 @@ body{
 .comment-input-child {
   margin-top: 20px;
 }
-
 .submit-comment-child {
   display: none;
 }

@@ -96,6 +96,11 @@ vi:
     new_h1_html: "Thêm Sân Bóng"
     edit_h1_html: "Cập nhật Sân bóng đá"
     comfirm_delete: "Bạn chắc chắn"
+    status:
+      pending: "Chờ xử lý"
+      accept: "Đồng ý"
+      rejected: "Từ chối"
+      cancel: "Hủy bỏ"
   login:
     name: "Đăng nhập"
   sign_up:

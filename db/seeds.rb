@@ -19,3 +19,11 @@ User.create!(name: "Tran Hai",
                activated: true,
                activated_at: Time.zone.now)
 end
+6.times do |n|
+  field_name = "Sân bóng #{n+1}"
+  SoccerField.create!(field_name: field_name,
+                      type_field: 1,
+                      price: 1000000,
+                      status: 1,
+                      address: "Hòa Vang")
+end
