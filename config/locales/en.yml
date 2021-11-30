@@ -39,12 +39,15 @@ en:
     hi: "Hi"
     text_activate: "elcome to the Sun Soccer Field! Click on the link below to activate your account:"
     ativate_link: "Activate"
+  search:
+    danger: "empty data"
   base:
     title: "Sun* soccer fields"
     name: "Soccer Field"
     location: "Location"
     cancel: "Cancel"
   home:
+    searching: "Searching..."
     log_in: "Log in"
     sign_up: "Register"
     name: "Home"
@@ -230,5 +233,6 @@ en:
     manager_user: "Manager user"
     manager_revenue: "Manager revenue"
     manager_field: "Manager field"
-
-
+  search_view:
+    title: "Seach Yard"
+    h1: "Search Soccer yard"

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy"
+    get "pages/search", to: "pages#search", as: "search_page"
     resources :account_activations, only: :edit
     resources :users
     resources :password_resets, only: %i(new create edit update)

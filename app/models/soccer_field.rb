@@ -13,4 +13,8 @@ class SoccerField < ApplicationRecord
   validates :price, numericality: {only_integer: true,
                                    greater_than_or_equal_to: 0},
                     allow_blank: true
+
+  scope :search_name, (lambda do |pr|
+    where("lower(field_name) LIKE :search", search: "%#{pr}%") if pr.present?
+  end)
 end
