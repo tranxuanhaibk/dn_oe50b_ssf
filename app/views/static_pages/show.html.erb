@@ -1,0 +1,32 @@
+<div class="col-lg-9">
+  <%= render "slide" %>
+
+  <!-- title yard-->
+  <div class="row">
+    <h3><%= @soccer_field.field_name %></h3>
+  </div>
+
+  <div class="row">
+    <h5> Giá sân: <%= @soccer_field.price %> VND</h5>
+  </div>
+  <!-- Rating -->
+  <div class="row">
+    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+  </div>
+
+  <!-- Button booking -->
+  <div class="row justify-content-end mb-4">
+    <%= render partial: "form_search_for_order", object: @booking_used%>
+  </div>
+
+  <!-- Address -->
+  <div class="row location">
+    <p><%= t("home.address") %><%= @soccer_field.address %></p>
+  </div>
+
+  <!-- Comment -->
+  <div class="row">
+    <%= render "comment" %>
+  </div>
+</div>
+<%= javascript_pack_tag "reply.js" %>

@@ -1,0 +1,6 @@
+$('#result_soccer_fields').html('')
+<% if @soccer_fields.blank? %>
+  $('#result_soccer_fields').append('<%= j render "soccer_fields/err_soccer_field" %>')
+<% else %>
+  $('#result_soccer_fields').append('<%= j render partial: "soccer_fields/soccer_field", collection: @soccer_fields %>');
+<% end %>

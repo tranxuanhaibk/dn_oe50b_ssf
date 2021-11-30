@@ -1,0 +1,42 @@
+<% provide(:title, t("menu_manager.booking_field")) %>
+<div class="col-lg-9">
+  <table class="table">
+  
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">
+          <%= t "order.title_admin.name" %>
+        </th>
+        <th scope="col">
+          <%= t "order.title_admin.type" %>
+        </th>
+        <th scope="col">
+          <%= t "order.title_admin.time" %>
+        </th>
+        <th scope="col">
+           <%= t "order.title_admin.price" %>
+        </th>
+        <th scope="col">
+           <%= t "order.title_admin.date" %>
+        </th>
+      </tr>
+
+      <% @soccer_fields_cookies.each do |key, value| %>
+        <% soccer_field = @soccer_fields_db.find {|soccer_field| soccer_field.id == key.to_i} %>
+        <% value.each.with_index(1) do |detail, index| %>
+          <tr>
+            <td><%= index == 1 ? soccer_field.field_name : nil %></td>
+            <td><%= detail.split(",")[2] %></td>
+            <td><%= detail.split(",")[0]  %></td>
+            <td><%= soccer_field.price %></td>
+            <td><%= detail.split(",")[1] %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </thead>
+
+    
+  </table>
+  <%= link_to "Chốt đơn", user_order_soccer_field_path %>
+</div>
+

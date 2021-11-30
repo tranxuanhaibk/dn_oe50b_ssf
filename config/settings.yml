@@ -17,4 +17,10 @@ per_page:
 paginate:
   home: 6
   manage: 5
-
+admin_order:
+  per_page: 10
+  enum_status:
+    pending: "pending"
+    accept: "accept"
+    rejected: "rejected"
+quantity_product: 0

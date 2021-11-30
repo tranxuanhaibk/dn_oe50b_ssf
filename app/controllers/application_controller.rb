@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-
+  include CartsHelper
   before_action :set_locale
 
   private
@@ -27,10 +27,10 @@ class ApplicationController < ActionController::Base
     redirect_back_or user
   end
 
-  def check_admin
-    return if current_user.admin?
+  def check_login
+    return if logged_in?
 
-    flash[:warning] = t ".warning"
-    redirect_to root_path
+    flash[:warning] = t "message.pls_login"
+    redirect_to login_path
   end
 end

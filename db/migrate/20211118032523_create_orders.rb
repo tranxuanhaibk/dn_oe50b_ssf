@@ -5,7 +5,6 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.integer :quantity
       t.integer :status
       t.bigint :total_cost
-      t.integer :is_payment
 
       t.timestamps
     end

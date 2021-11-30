@@ -4,9 +4,9 @@
       <%= link_to t("eng"), locale: :en, class: "nav-link" %>
       <%= link_to t("vie"), locale: :vi, class: "nav-link" %>
     </li>
-    <%= link_to t("base.name"), home_path, class: "navbar-brand font-weight-bold" %>
+    <h3><%= link_to t("base.name"), home_path, class: "navbar-brand font-weight-bold" %></h3>
     <%= render "layouts/search" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,10 +15,17 @@
         <li class="nav-item active">
           <%= link_to t("home.name"), home_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t("booking.booking_fields"), "#", class: "nav-link" %>
-        </li>
         <% if logged_in? %>
+        <div class="wrap-icon-header flex-w flex-r-m">
+          <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" id="quantity_products" data-notify="<%= size_cart %>">
+            <%= link_to carts_path do %>
+              <p id="size_cart">Số lương<%= size_cart %></p>
+            <% end %>
+            </div>
+            <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+            <i class="fas fa-heart"></i>
+            </a>
+          </div>
           <div class="dropdown show">
           <%= link_to "#", {class: "btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
             <%= t ".account" %>

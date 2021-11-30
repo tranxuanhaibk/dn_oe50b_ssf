@@ -1,4 +1,4 @@
-function handle_order(date,id_timecost){
+function handle_order(date,id_order_detail){
   var token = $('meta[name="csrf-token"]').attr('content')
   $.ajax({
     type: 'POST',
@@ -22,7 +22,7 @@ function handle_order(date,id_timecost){
         icon
       ).then((result) => {
         if (result.isConfirmed) {
-          location.reload();
+          soccer_field.reload();
         }
       })
     }
@@ -38,11 +38,12 @@ $(document).ready(function() {
     })
   });
   $(document).on('click','.ordering_soccer_field',function(){
+    debugger
     var soccer_field_id = $(this).data('soccer_field_id')
     var field_name = $(this).data('field_name')
     var booking_used = $(this).data('booking_used')
     var type_field = $(this).data('type_field')
-    var current_price = $(this).data('current_price').split(".")[0]
+    var booking_used = $(this).data('booking_used').split(".")[0]
     var date = $('#date').val()
     var order_detail_id = $(this).data('id')
     Swal.fire({
@@ -66,4 +67,38 @@ $(document).ready(function() {
       }
     })
   });
-})
+});
+
+$('.shopping').on('click', function () {
+  var soccer_field_id = $(this).attr("data_soccer_field_id");
+  var date = $('#date').val();
+  var time = $('#hours').val();
+  var type = $('#type_field').val();
+
+  $.ajax({
+    url: '/carts',
+    type: 'POST',
+    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+    cache: false,
+    data: {
+      soccer_field_id: soccer_field_id,
+      time: time,
+      date: date,
+      type: type
+    },
+    success: function (data) {
+      if(data.error) {
+        alert("San nay da co nguoi dat, vui long thu lai!");
+      };
+      if(!data.size_cart) {
+        alert("Ban da dat san nay roi!");
+      };
+      if(data.size_cart > 0) {
+        alert("Dat thanh cong, vui long chot don de giu san!");
+      };
+    },
+    error: function () {
+      alert(I18n.t("alert.add_to_cart.fail"));
+    }
+  });
+});

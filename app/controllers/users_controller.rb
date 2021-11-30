@@ -50,6 +50,13 @@ class UsersController < ApplicationController
 
   private
 
+  def check_admin
+    return if current_user.admin?
+
+    flash[:warning] = t "message.is_admin"
+    redirect_to root_path
+  end
+
   def user_params
     params.require(:user)
           .permit(:email, :password, :password_confirmation,

@@ -1,27 +1,27 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
-    root "static_pages#home"
-    get "/home", to: "static_pages#home"
-    get "/order", to: "static_pages#order"
-    get "/detail", to: "static_pages#detail"
+    root "static_pages#index"
+    get "/home", to: "static_pages#index"
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
-    get "/logout", to: "sessions#destroy"
+    delete "/logout", to: "sessions#destroy"
     get "pages/search", to: "pages#search", as: "search_page"
     resources :account_activations, only: :edit
     resources :users
+    resources :carts
     resources :password_resets, only: %i(new create edit update)
-
+    resources :static_pages, only: %i(index show)
     namespace :admin do
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"
       resources :soccer_fields,except: %i(show)
       resources :orders, only: %i(index update)
     end
-
     namespace :user do
       resources :orders, only: %i(index show create)
+      get "seach_soccer_field_for_order", to: "orders#seach_soccer_field_for_order"
+      get "order_soccer_field", to: "orders#order_soccer_field"
     end
   end
 end

@@ -1,10 +1,40 @@
 class User::OrdersController < ApplicationController
-  before_action :logged_in_user, only: %i(index)
+  before_action :logged_in_user, only: %i(index seach_soccer_field_for_order)
+
+  def seach_soccer_field_for_order
+    soccer_field = SoccerField.find_by(id: params[:soccer_field_id], type_field: params[:soccer_field_id])
+    @order_details = current_user.order_detail.where(soccer_field_id: soccer_field.id)
+    @ordered_list = Order.find_date_order(@soccer_fields.pluck(:id),
+                                     params[:date]).pluck(:order_detail_id)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def order_soccer_field
+    JSON.parse(cookies[:soccer_fields]).each do |key, value|
+      soccer_field = SoccerField.find key
+
+      ordered = Order.create(user_id: current_user.id, quantity: value.length,
+                            status: 1, total_cost: soccer_field.price * value.length)
+
+      value.each do |i|
+        value_detail = i.split(',')
+        time = value_detail[0]
+        date = value_detail[1]
+        type = value_detail[2]
+        soccer_field.order_details.create(order_id: ordered.id, current_price: soccer_field.price,
+                                          booking_used: time, type_field: type, order_date: date)
+      end
+    end
+    cookies.delete :soccer_fields
+
+    flash[:success] = "Dat san thanh cong"
+    redirect_to root_path
+  end
 
   def create
-    order_param = Hash.new
-    order_param[:order_detail_id] = params[:id_order_detail]
-    order_param[:order_date] = params[:date]
     @order = current_user.orders.build order_param
     @data = Hash.new
     respond_to do |format|

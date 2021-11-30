@@ -1,18 +1,16 @@
-<div class="col-lg-4 col-md-6 mb-4">
-  <div class="card h-100">
-    <%= image_tag ( "/assets/anh03.jpg"),class: "card-img-top" %>
-    <div class="card-body">
-      <h4 class="card-title">
-        <%= link_to soccer_field.field_name, detail_path %>
-      </h4>
-      <p><%= t "booking.soccer_status" %> :<%= soccer_field.status %></p>
-      <h6><%= t "booking.soccer_type" %> :<%= soccer_field.type_field %></h6>
-      <p class="card-text"><%= t "booking.soccer_address" %> :<%= soccer_field.address %></p>
-      <p class="card-text"><%= t "booking.soccer_status" %> :<%= soccer_field.status %></p>
-      <p class="card-text"><%= t "booking.soccer_price" %> :<%= soccer_field.price %></p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-    </div>
-  </div>
-</div>
+<tr>
+  <td> <%= soccer_field.field_name %> </td>
+  <td> <%= soccer_field.type_field %> </td>
+  <td> <%= soccer_field.address %> </td>
+  <td class="text-info"> <%= soccer_field.status %></p> </td>
+  <td> <%= soccer_field.price %> </td>
+  <td>
+    <%= link_to edit_admin_soccer_field_path(soccer_field.id) ,class: "btn btn-primary" do %>
+      <i class="fa fa-pencil-square" aria-hidden="true"></i>
+    <% end %>
+    <%= link_to admin_path(soccer_field.id), method: :delete,
+        data: { confirm: t("users.user.alert_delete") }, class: "btn btn-danger" do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  </td>
+</tr>

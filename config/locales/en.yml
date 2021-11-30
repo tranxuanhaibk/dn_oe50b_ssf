@@ -27,8 +27,7 @@ en:
   account_activations_controller:
     account_activate: "Account activated!"
     account_danger: "Invalid activation link"
-  admin_controller:
-    message:
+  message:
       pls_login: "You must be logged in to use the system."
       is_admin: "You are not an admin so you cannot use this function."
   application_controller:
@@ -48,6 +47,8 @@ en:
     cancel: "Cancel"
   home:
     searching: "Searching..."
+    searching: "Search..."
+    address: "Address: "
     log_in: "Log in"
     sign_up: "Register"
     name: "Home"
@@ -101,18 +102,46 @@ en:
       accept: "Accept"
       rejected: "Rejected"
       cancel: "Cancel"
+  order:
+    name: "Order"
+    search: "Seach"
+    title_admin:
+      image: "Image"
+      name: "Name"
+      type: "Type Field"
+      time: "Time"
+      code: "Code Field"
+      price: "Price"
+      date: "Date"
+    detail_order:
+      detail: "Detail order"
+      status: "Status:"
+      date_booking: "Date of order:"
+      time_booking: "Time of order:"
+      name_booking: "Name of order:"
+      phone_booking: "Phone of order:"
+      field: "Field:"
+      time: "Time slot:"
+      code: "Field code:"
+      cost: "Field cost:"
+      btn_submit: "Accept"
+      btn_cancel: "Reject"
+      btn_exit: "Exit"
   login:
     name: "Login"
   sign_up:
     name: "Register"
   detail:
-    choose: "Choose the yard"
+    choose: "Choose the soccer fields"
     date: "Date"
     time: "Time"
     type: "Type"
     comment: "Comment"
     reply: "reply"
     name: "Detail"
+  search_view:
+    title: "Seach Fields"
+    h1: "Search Soccer Fields"
   district:
     tk: "Thanh Khe District"
     st: "Son Tra District"
@@ -173,6 +202,26 @@ en:
     error_messages:
       contains: "The form contains %{errors}"
       error: "error"
+    message:
+    pls_login: "You must be logged in to use the system."
+    is_admin: "You are not an admin so you cannot use this function."
+    update_location: "locations was updated."
+    update_fail: "Update fail"
+    fail: "Unable to execute request, try again"
+    update_order:
+      not_exist_id: "Order id not found!"
+      update_sucess: "Order processing successfully!"
+      update_fail: "Order processing failed!"
+      contains: "The form contains %{errors}"
+      error: "error"
+    show_field:
+      not_exist_yard: "Field is not found!"
+    order:
+      pls_login: "You must be logged in to booking yard"
+      order_succ: "Booking success"
+      order_fail: "Booking failed"
+      order_succ_mess: "Thank you for choosing our soccer field!"
+      order_fail_mess: "There was an error in the system, please try again later!"
   asession:
     show:
       warning: "No user found"
@@ -188,10 +237,10 @@ en:
     or: "OR"
     facebook: "Sign in with Facebook"
     google: "Sign in with Google"
-  create:
-    invalid: "Invalid email/password combination"
-  check_activated:
-    warning: "Account not activated. Check your email for the activation link."
+    create:
+      invalid: "Invalid email/password combination"
+    check_activated:
+      warning: "Account not activated. Check your email for the activation link."
   form:
     session:
       password: "Password"
