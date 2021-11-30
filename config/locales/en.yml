@@ -96,6 +96,34 @@ en:
     new_h1_html: "Add Soccer Field"
     edit_h1_html: "Update Soccer Field"
     comfirm_delete: "Are you sure ?"
+    detail_booking:
+      detail: "Detail booking"
+      status: "Status:"
+      date_booking: "Date of booking:"
+      time_booking: "Time of booking:"
+      name_booking: "Name of booking:"
+      phone_booking: "Phone of booking:"
+      field: "Field:"
+      time: "Time slot:"
+      code: "Field code:"
+      cost: "Field cost:"
+      btn_submit: "Accept"
+      btn_cancel: "Reject"
+      btn_exit: "Exit"
+      action: "Action"
+    btn_handle: "Handle"
+    btn_view: "View"
+    status:
+      pending: "Pending"
+      accept: "Accept"
+      rejected: "Rejected"
+      cancel: "Cancel"
+    title_admin:
+      image: "Image"
+      name: "Name"
+      type: "Type Field"
+      time: "Time"
+      code: "Code Soccer Field"
   login:
     name: "Login"
   sign_up:
@@ -236,3 +264,7 @@ en:
   search_view:
     title: "Seach Yard"
     h1: "Search Soccer yard"
+  menu_manager:
+    booking_field: "Booking Field Management"
+  date_format: "%d/%m/%Y"
+  time_format: "%k:%M"
