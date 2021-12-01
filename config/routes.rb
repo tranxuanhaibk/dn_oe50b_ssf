@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :soccer_fields, except: %i(show)
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"
-      resources :orders, only: :index
+      resources :orders, only: %i(index update)
     end
   end
 end

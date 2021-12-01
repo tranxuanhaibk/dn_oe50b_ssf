@@ -5,7 +5,5 @@ class StaticPagesController < ApplicationController
                                           per_page: Settings.paginate.home)
   end
 
-  def order; end
-
   def detail; end
 end

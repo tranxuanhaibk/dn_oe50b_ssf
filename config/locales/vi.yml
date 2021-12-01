@@ -124,6 +124,10 @@ vi:
       type: "Loại Sân"
       time: "Khung giờ"
       code: "Mã Sân"
+    update_booking:
+      not_exist_id: "Không tìm thấy id đơn hàng"
+      update_sucess: "Xử lý đơn hàng thành công"
+      update_fail: "Xử lý đơn hàng thất bại"
   login:
     name: "Đăng nhập"
   sign_up:
