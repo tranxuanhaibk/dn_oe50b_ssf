@@ -4,7 +4,7 @@
       <%= link_to t("eng"), locale: :en, class: "nav-link" %>
       <%= link_to t("vie"), locale: :vi, class: "nav-link" %>
     </li>
-    <%= link_to t("base.name"), home_path, class: "navbar-brand font-weight-bold" %>
+    <h3><%= link_to t("base.name"), home_path, class: "navbar-brand font-weight-bold" %></h3>
     <%= render "layouts/search" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,10 +15,12 @@
         <li class="nav-item active">
           <%= link_to t("home.name"), home_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t("booking.booking_fields"), "#", class: "nav-link" %>
-        </li>
         <% if logged_in? %>
+          <div class="" id="quantity_products" data-notify="<%= size_cart %>">
+            <%= link_to carts_path do %>
+              <p class="text-white bg-dark btn btn-secondary" id="size_cart"><%= t ".size_cart" %> : <%= size_cart %></p>
+            <% end %>
+          </div>
           <div class="dropdown show">
           <%= link_to "#", {class: "btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
             <%= t ".account" %>

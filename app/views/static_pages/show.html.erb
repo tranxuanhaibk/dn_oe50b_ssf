@@ -21,14 +21,15 @@
     </p>
   </div>
 
-  <!-- Button booking -->
+   <!-- Button booking -->
   <div class="row justify-content-end mb-4">
     <%= render partial: "form_search_for_order", object: @booking_used%>
   </div>
 
   <!-- Comment -->
   <div class="row">
-    <%= render "comment" %>
+    <%= render "comments/form" %>
+    <%= render @comments %>
   </div>
 </div>
 <%= javascript_pack_tag "reply.js" %>

@@ -36,6 +36,9 @@ vi:
   message:
       pls_login: "Bạn phải đăng nhập để sử dụng hệ thống."
       is_admin: "Bạn không phải là quản trị viên nên bạn không thể sử dụng chức năng này."
+  comment_controller:
+    success: "Cảm ơn, bình luận của bạn"
+    fail: "Không thể thực hiện yêu cầu, thử lại"
   application_controller:
     log_in:
       danger: "Xin vui lòng đăng nhập !"
@@ -46,6 +49,8 @@ vi:
     ativate_link: "Kích hoạt"
   search:
     danger: "Dữ liệu nhập trống"
+    success: "tìm kiếm thành công"
+    info: "tìm kiếm không thành công"
   base:
     title: "Sân bóng Sun*"
     name: "Sân bóng Sun*"
@@ -118,6 +123,9 @@ vi:
       code: "Mã Sân"
       price: "Giá"
       date: "Ngày đặt"
+    update_booking:
+      not_exist_id: "Không tìm thấy id sân"
+      update_sucess: "Xử lý sân thành công"
     detail_booking:
       detail: "Chi tiết đặt sân"
       status: "Trạng thái:"
@@ -135,6 +143,7 @@ vi:
       btn_exit: "Thoát"
   login:
     name: "Đăng nhập"
+    click: "Nhấp vào đây"
   sign_up:
     name: "Đăng ký"
   detail:
@@ -142,12 +151,15 @@ vi:
     date: "Ngày"
     time: "Thời gian"
     type: "Loại sân"
-    comment: "Bình luận"
+    chat: "Bình luận..............."
     reply: "Trả lời"
     name: "Chi tiết"
+    comment: "Bình luận"
   search_view:
     title: "Tìm kiếm sân"
     h1: "Tìm kiếm sân bóng"
+    comment: "Cảm ơn, bình luận của bạn"
+    reply: "Trả lời"
   district:
     tk: "Quận Thanh Khê"
     st: "Quận Sơn Trà"
@@ -198,7 +210,7 @@ vi:
       success: "Cập nhật người dùng thành công"
       danger: "Cập nhật người dùng thất bại!"
     create:
-      info: "Tạo người dùng thành công"
+      info: "Vui long kiem tra tai khoan mail cua ban"
       warning: "Tạo tài khoản thất bại"
     correct_user:
       danger: "Sai người dùng!"
