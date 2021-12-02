@@ -2,7 +2,7 @@
   <% if logged_in? && current_user.admin? %>
     <h1 class="my-4"><%= t "admin.manager_title" %></h1>
     <div class="list-group">
-      <%= link_to t("admin.manager_booking_field"), "#", class:"list-group-item" %>
+      <%= link_to t("admin.manager_booking_field"), admin_orders_path, class:"list-group-item" %>
       <%= link_to t("admin.manager_user"), users_path, class: "list-group-item" %>
       <%= link_to t("admin.manager_revenue"), "#", class:"list-group-item" %>
       <%= link_to t("admin.manager_field"), admin_soccer_fields_path, class:"list-group-item" %>

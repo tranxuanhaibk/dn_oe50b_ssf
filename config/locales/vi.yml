@@ -96,6 +96,34 @@ vi:
     new_h1_html: "Thêm Sân Bóng"
     edit_h1_html: "Cập nhật Sân bóng đá"
     comfirm_delete: "Bạn chắc chắn"
+    detail_booking:
+      detail: "Chi tiết đặt sân"
+      status: "Trạng thái:"
+      date_booking: "Ngày đặt sân:"
+      time_booking: "Thời gian đặt sân:"
+      name_booking: "Tên người đặt sân:"
+      phone_booking: "Số điện thoại:"
+      field: "Sân:"
+      time: "Thời gian:"
+      code: "Mã sân:"
+      cost: "Giá tiền sân:"
+      btn_submit: "Đồng ý"
+      btn_cancel: "Hủy đơn"
+      btn_exit: "Thoát"
+      action: "Chức Năng"
+    btn_handle: "Xử lý"
+    btn_view: "Xem"
+    status:
+      pending: "Chờ xử lý"
+      accept: "Đồng ý"
+      rejected: "Từ chối"
+      cancel: "Hủy bỏ"
+    title_admin:
+      image: "Hình Ảnh"
+      name: "Tên Sân"
+      type: "Loại Sân"
+      time: "Khung giờ"
+      code: "Mã Sân"
   login:
     name: "Đăng nhập"
   sign_up:
@@ -236,3 +264,7 @@ vi:
   search_view:
     title: "Tìm kiếm Sân"
     h1: "Tìm kiếm sân bóng đá"
+  menu_manager:
+    booking_field: "Quản lý đặt sân"
+  date_format: "%d/%m/%Y"
+  time_format: "%k:%M"
