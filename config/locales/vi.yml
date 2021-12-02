@@ -36,12 +36,18 @@ vi:
       danger: "Xin vui lòng đăng nhập !"
   user_mailer:
     activate: "Kích hoạt tài khoản"
+    hi: "Chào"
+    text_activate: "chào mừng bạn đến với Sun Soccer Field! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+    ativate_link: "Kích hoạt"
+  search:
+    danger: "Dữ liệu nhập trống"
   base:
     title: "Sân bóng Sun*"
     name: "Sân bóng Sun*"
     location: "Vị trí"
     cancel: "Hủy bỏ"
   home:
+    searching: "Tìm kiếm..."
     log_in: "Đăng nhập"
     sign_up: "Đăng ký"
     name: "Trang chủ"
@@ -227,5 +233,6 @@ vi:
     manager_user: "Quản lý người dùng"
     manager_revenue: "Quản lý doanh thu"
     manager_field: "Quản lý sân"
-
-
+  search_view:
+    title: "Tìm kiếm Sân"
+    h1: "Tìm kiếm sân bóng đá"
