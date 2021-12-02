@@ -1,4 +1,4 @@
-<%= form_for([:admin, @soccer_fields]) do |l|%>
+<%= form_for([:admin, @soccer_field]) do |l|%>
   <%= render "shared/error_messages.html.erb", object: l.object %>
   <%= l.label :field_name, t("booking.field_name") %>
   <%= l.text_field :field_name, class: "form-control" %>
@@ -11,5 +11,6 @@
 
   <%= l.label :price, t("booking.price") %>
   <%= l.text_field :price, class: "form-control" %>
-  <%= l.submit t("booking.new"), class: "btn btn-primary" %>
+
+  <%= l.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

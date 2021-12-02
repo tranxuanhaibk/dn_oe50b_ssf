@@ -15,6 +15,11 @@ vi:
   soccer_fields_controller:
     create_success: "Thêm sân đá bóng vào thành công"
     create_warning: "Thêm sân đá bóng vào không thành công"
+    load_fail: "sân bóng đá không tìm thấy"
+    update_success: "Cập nhật thành công sân đá bóng"
+    update_warning: "Cập nhật sân đá bóng không thành công"
+    destroy_success: "Xóa thành công sân đá bóng"
+    destroy_danger: "Không xóa được sân đá bóng"
   user_controller:
     check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     Profile_updated: "Hồ sơ cá nhân đã cập nhật"
@@ -82,6 +87,9 @@ vi:
     edit: "Sửa"
     delete: "Xóa"
     price: "Giá tiền"
+    new_h1_html: "Thêm Sân Bóng"
+    edit_h1_html: "Cập nhật Sân bóng đá"
+    comfirm_delete: "Bạn chắc chắn"
   login:
     name: "Đăng nhập"
   sign_up:

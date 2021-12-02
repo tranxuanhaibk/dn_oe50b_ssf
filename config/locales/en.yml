@@ -15,6 +15,11 @@ en:
   soccer_fields_controller:
     create_success: "Add soccer_fields success"
     create_warning: "Add soccer_fields failed"
+    load_fail: "soccer field not found"
+    update_success: "Update soccer_fields success"
+    update_warning: "Update soccer_fields failed"
+    destroy_success: "Delete soccer_fields success"
+    destroy_danger: "Delete soccer_fields failed"
   user_controller:
     check_email: "Please check your email to activate your account."
     Profile_updated: "Profile update"
@@ -85,6 +90,9 @@ en:
     edit: "update"
     delete: "delete"
     price: "Price"
+    new_h1_html: "Add Soccer Field"
+    edit_h1_html: "Update Soccer Field"
+    comfirm_delete: "Are you sure ?"
   login:
     name: "Login"
   sign_up:
