@@ -124,6 +124,10 @@ en:
       type: "Type Field"
       time: "Time"
       code: "Code Soccer Field"
+    update_booking:
+      not_exist_id: "Order id not found!"
+      update_sucess: "Order processing successfully!"
+      update_fail: "Order processing failed!"
   login:
     name: "Login"
   sign_up:
