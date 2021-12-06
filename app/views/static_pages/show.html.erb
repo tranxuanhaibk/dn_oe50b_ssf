@@ -1,0 +1,34 @@
+<div class="col-lg-9">
+  <%= render "slide" %>
+
+  <!-- title yard-->
+  <div class="row">
+    <h3><%= t(".field_name") %><%= @soccer_field.field_name %></h3>
+  </div>
+
+  <div class="row">
+    <h5><%= t(".price") %><%= @soccer_field.price %> VND</h5>
+  </div>
+  <!-- Rating -->
+  <div class="row">
+    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+  </div>
+
+    <div class="col-xl-12">
+    <p class="content-yard">
+      <h4><%= t(".description") %></h4>
+      <h5><%= @soccer_field.description %></br>
+    </p>
+  </div>
+
+  <!-- Button booking -->
+  <div class="row justify-content-end mb-4">
+    <%= render partial: "form_search_for_order", object: @booking_used%>
+  </div>
+
+  <!-- Comment -->
+  <div class="row">
+    <%= render "comment" %>
+  </div>
+</div>
+<%= javascript_pack_tag "reply.js" %>

@@ -1,0 +1,41 @@
+<div class="col-sm-2">
+  <%= link_to t("order.name"), "#", class: "btn btn-primary btn-booking", data: {toggle:"modal", target:"#exampleModal"} %>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= t "detail.choose" %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= link_to "javascript:void(0)", class: "social-info shopping", data_soccer_field_id: @soccer_field.id do %>
+          <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+            <%= t(".add_to_cart") %>
+          </button>
+        <% end %>
+        <%= form_tag user_seach_soccer_field_for_order_path, method: :get, remote: true do %>
+          <label><%= t "detail.date" %>:</label>
+            <%= date_field_tag :date, val_date() %>
+          <br>
+          <label for="hours"><%= t "detail.time" %>:</label>
+            <%= select_tag :hours, 
+            raw("<option selected='selected'>6:30-7:30</option>
+                 <option>7:30-8:30</option>
+                 <option>8:30-9:30</option>
+                 <option>9:30-10:30</option>") %>
+          <br>
+          <label for="type"><%= t "detail.type" %>:</label>
+            <%= select_tag :type_field, raw("<option selected='selected'>five</option><option>seven</option><option>elevent</option>") %>
+          <hr>
+          <%= hidden_field_tag :soccer_field_id, @soccer_field.id %>
+        <% end %>
+        <div id="result_soccer_fields" class="row show-yard-seach">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag 'order', 'data-turbolinks-track': 'reload' %>

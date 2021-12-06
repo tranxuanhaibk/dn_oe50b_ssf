@@ -4,9 +4,9 @@ class CreateOrderDetails < ActiveRecord::Migration[6.1]
       t.references :order, null: false, foreign_key: true
       t.references :soccer_field, null: false, foreign_key: true
       t.bigint :current_price
-      t.integer :booking_used, null: false
-      t.datetime :time_started
-      t.datetime :time_finished
+      t.string :booking_used
+      t.integer :type_field
+      t.date :order_date
 
       t.timestamps
     end
