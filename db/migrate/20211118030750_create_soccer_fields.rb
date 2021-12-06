@@ -5,7 +5,7 @@ class CreateSoccerFields < ActiveRecord::Migration[6.1]
       t.integer :type_field
       t.bigint :price
       t.integer :status, default: 0
-      t.string :address
+      t.string :description
 
       t.timestamps
     end

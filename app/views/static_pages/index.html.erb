@@ -27,7 +27,7 @@
     </a>
   </div>
   <div class="row">
-      <%= render @soccer_fields %>
-    </div>
-    <%= will_paginate @soccer_fields %>
+    <%= render partial: "soccer_field", collection: @soccer_fields%>
   </div>
+    <%= will_paginate @soccer_fields %>
+</div>

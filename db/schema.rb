@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_21_081352) do
+ActiveRecord::Schema.define(version: 2021_12_06_040925) do
 
   create_table "order_details", force: :cascade do |t|
     t.integer "order_id", null: false
     t.integer "soccer_field_id", null: false
     t.bigint "current_price"
-    t.integer "booking_used", null: false
-    t.datetime "time_started"
-    t.datetime "time_finished"
+    t.string "booking_used"
+    t.integer "type_field"
+    t.date "order_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
@@ -33,17 +33,19 @@ ActiveRecord::Schema.define(version: 2021_11_21_081352) do
     t.integer "is_payment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "order_date"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "soccer_fields", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "soccer_fields", force: :cascade do |t|
     t.string "field_name"
     t.integer "type_field"
     t.bigint "price"
     t.integer "status", default: 0
-    t.string "address"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "code"
   end
 
   create_table "soccer_rates", force: :cascade do |t|
