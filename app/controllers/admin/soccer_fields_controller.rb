@@ -46,7 +46,7 @@ class Admin::SoccerFieldsController < ApplicationController
 
   def soccer_field_params
     params.require(:soccer_field)
-          .permit(:field_name, :type_field, :address, :price, :status)
+          .permit(:field_name, :type_field, :description, :price, :status)
   end
 
   def load_soccer_field

@@ -16,7 +16,7 @@
             <%= t(".add_to_cart") %>
           </button>
         <% end %>
-        <%= form_tag user_seach_soccer_field_for_order_path, method: :get, remote: true do %>
+        <%= form_tag "", method: :get, remote: true do %>
           <label><%= t "detail.date" %>:</label>
             <%= date_field_tag :date, val_date() %>
           <br>

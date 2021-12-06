@@ -7,6 +7,12 @@ vi:
         email: "Địa chỉ email"
         password: "Mật khẩu"
         password_confirmation: "Xác Nhận Mật Khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "Mật khảu không được trùng"
   application:
     check_admin:
       warning: "Bạn không phải quản trị viên!"
@@ -27,8 +33,7 @@ vi:
   account_activations_controller:
     account_activate: "Tài khoản đã được kích hoạt!"
     account_danger: "Liên kết kích hoạt không hợp lệ"
-  admin_controller:
-    message:
+  message:
       pls_login: "Bạn phải đăng nhập để sử dụng hệ thống."
       is_admin: "Bạn không phải là quản trị viên nên bạn không thể sử dụng chức năng này."
   application_controller:
@@ -48,6 +53,7 @@ vi:
     cancel: "Hủy bỏ"
   home:
     searching: "Tìm kiếm..."
+    address: "Địa chỉ: "
     log_in: "Đăng nhập"
     sign_up: "Đăng ký"
     name: "Trang chủ"
@@ -75,10 +81,10 @@ vi:
     soccer_type: "Loại Sân"
     soccer_address: "Địa chỉ sân"
     soccer_status: "Trạng thái sân bóng"
-    soccer_price: "Giá sân bóng"
+    soccer_price: "Giá sân"
     field_name: "Tên sân bóng"
     type_field: "Loại Sân"
-    address: "Địa chỉ sân"
+    description: "Mô tả sân"
     soccer_status: "Trạng thái sân bóng"
     price: "Giá sân bóng"
     booking_fields: "Đặt sân"
@@ -96,10 +102,27 @@ vi:
     new_h1_html: "Thêm Sân Bóng"
     edit_h1_html: "Cập nhật Sân bóng đá"
     comfirm_delete: "Bạn chắc chắn"
+    status:
+      pending: "Chờ xử lý"
+      accept: "Đồng ý"
+      rejected: "Từ chối"
+      cancel: "Hủy bỏ"
+  order:
+    name: "Đặt sân"
+    search: "Tìm kiếm"
+    title_admin:
+      image: "Hình Ảnh"
+      name: "Tên Sân"
+      type: "Loại Sân"
+      time: "Khung giờ"
+      code: "Mã Sân"
+      price: "Giá"
+      date: "Ngày đặt"
     detail_booking:
       detail: "Chi tiết đặt sân"
       status: "Trạng thái:"
       date_booking: "Ngày đặt sân:"
+      date: "Ngày:"
       time_booking: "Thời gian đặt sân:"
       name_booking: "Tên người đặt sân:"
       phone_booking: "Số điện thoại:"
@@ -110,24 +133,6 @@ vi:
       btn_submit: "Đồng ý"
       btn_cancel: "Hủy đơn"
       btn_exit: "Thoát"
-      action: "Chức Năng"
-    btn_handle: "Xử lý"
-    btn_view: "Xem"
-    status:
-      pending: "Chờ xử lý"
-      accept: "Đồng ý"
-      rejected: "Từ chối"
-      cancel: "Hủy bỏ"
-    title_admin:
-      image: "Hình Ảnh"
-      name: "Tên Sân"
-      type: "Loại Sân"
-      time: "Khung giờ"
-      code: "Mã Sân"
-    update_booking:
-      not_exist_id: "Không tìm thấy id đơn hàng"
-      update_sucess: "Xử lý đơn hàng thành công"
-      update_fail: "Xử lý đơn hàng thất bại"
   login:
     name: "Đăng nhập"
   sign_up:
@@ -140,6 +145,9 @@ vi:
     comment: "Bình luận"
     reply: "Trả lời"
     name: "Chi tiết"
+  search_view:
+    title: "Tìm kiếm sân"
+    h1: "Tìm kiếm sân bóng"
   district:
     tk: "Quận Thanh Khê"
     st: "Quận Sơn Trà"
@@ -200,6 +208,26 @@ vi:
     error_messages:
       contains: "Biểu mẫu chứa %{errors}"
       error: "lỗi"
+  message:
+    pls_login: "Bạn phải đăng nhập mới sử dụng được hệ thống"
+    is_admin: "Bạn không phải là admin nên không dùng được chức năng này"
+    update_location: "Địa điểm đã được cập nhật."
+    update_fail: "Cập nhật thất bại"
+    fail: "Không thể thực hiện yêu cầu, thử lại"
+    update_order:
+      not_exist_id: "Không tìm thấy id đơn hàng"
+      update_sucess: "Xử lý đơn hàng thành công"
+      update_fail: "Xử lý đơn hàng thất bại"
+      contains: "Biểu mẫu chứa %{errors}"
+      error: "lỗi"
+    show_field:
+      not_exist_yard: "Không tìm thấy id sân bóng!"
+    order:
+      pls_login: "Bạn phải đăng nhập mới được phép đặt sân"
+      order_succ: "Đặt sân thành công"
+      order_fail: "Đặt sân thất bại"
+      order_succ_mess: "Cảm ơn bạn đã tin tưởng và lựa chọn sân bóng của chúng tôi!"
+      order_fail_mess: "Hệ thống đã xảy ra lỗi vui lòng thử lại sau!"
   assession:
     show:
       warning: "Không tìm thấy người dùng"
@@ -215,10 +243,10 @@ vi:
     or: "Hoặc"
     facebook: "Đăng nhập bằng Facebook"
     google: "Đăng nhập bằng  Google"
-  create:
-    invalid: "Sai email hoặc mật khẩu"
-  check_activated:
-    warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
+    create:
+      invalid: "Sai email hoặc mật khẩu"
+    check_activated:
+      warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
   form:
     session:
       password: "Mật khẩu"
@@ -259,16 +287,24 @@ vi:
       settings: "Cài đặt"
       account: "Tài khoản"
       logout: "Đăng xuất"
-  admin:
-    manager_title: "Quản lý Sân bóng Sun*"
-    manager_booking_field: "Quản lý đơn đặt sân"
-    manager_user: "Quản lý người dùng"
-    manager_revenue: "Quản lý doanh thu"
-    manager_field: "Quản lý sân"
+      size_cart: "Số lượng giỏ"
   search_view:
     title: "Tìm kiếm Sân"
     h1: "Tìm kiếm sân bóng đá"
-  menu_manager:
-    booking_field: "Quản lý đặt sân"
-  date_format: "%d/%m/%Y"
-  time_format: "%k:%M"
+  static_pages:
+    form_search_for_order:
+      add_to_cart: "Thêm vào giỏ"
+    show:
+      field_name: "Tên sân : "
+      description: "Mô tả"
+      price: "Giá sân : "
+  carts:
+    index:
+      cart_empty: "Giỏ hàng trống!"
+      title: "Chi tiết đơn hàng"
+      name: "Tên sân"
+      type: "Loại sân"
+      time: "Khung giờ"
+      date: "Ngày đặt"
+      order: "Chốt đơn"
+      price: "Giá"
