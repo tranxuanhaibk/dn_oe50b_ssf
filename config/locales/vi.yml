@@ -202,6 +202,39 @@ vi:
     create:
       success: "Tạo tài khoản thành công"
       unsuccess: " Tạo tài khoản không thành công"
+    orders:
+      index:
+        name_user_order: "Tên khách hàng : "
+        email_user_order: "Địa chỉ Email : "
+        list_order: "----DANH SÁCH ĐƠN CỦA BẠN----"
+      title:
+        order_date: "Ngày đặt"
+        quantity: "Số lượng"
+        total_cost: "Tổng tiền"
+        image: "Hình ảnh"
+        status: "Trạng thái đơn"
+      update:
+        update_sucess: "Cập nhật trạng thái thành công"
+        update_fail: "Cập nhật trạng thái thất bại"
+      order:
+        order_detail: "Chi tiết đơn hàng : "
+        name_user_order: "Tên khách hàng : "
+        status: "Trạng thái : "
+        field: "Tên sân : "
+        price: "Giá : "
+        date: "Ngày : "
+        time: "Khung giờ : "
+        type: "Loại sân : "
+        btn_handle: "Xem trạng thái"
+        btn_view: "Xem"
+        btn_exit: "Thoát"
+        btn_cancel: "Hủy đơn"
+        date_format: "%d/%m/%Y"
+        detele_order_detail: "Gỡ"
+    order_details:
+      destroy:
+        success: "Xóa sân bóng THÀNH CÔNG!"
+        fail: "Xóa sân bóng THẤT BẠI!"
   users:
     user:
       delete: "Xóa"
@@ -329,6 +362,10 @@ vi:
       account: "Tài khoản"
       logout: "Đăng xuất"
       size_cart: "Số lượng giỏ"
+    sidebar:
+      profile_order: "Thông tin khách hàng"
+      manager_order_to_user: "Quản lý đơn của tôi"
+      list_soccer_field: "Danh sách sân bóng"
   search_view:
     title: "Tìm kiếm Sân"
     h1: "Tìm kiếm sân bóng đá"
@@ -353,3 +390,9 @@ vi:
     booking_field: "Quản lý đặt sân"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  alert:
+    add_to_cart:
+      fail: "Thêm giỏ hàng Thất Bại!"
+      order_fail: "Sân đã có người đặt, Vui lòng chọn sân khác!"
+      order_success: "Đặt thành công, Vùi lòng kiểm tra và Chốt đơn!"
+      ordered: "Sân đã đặt!"

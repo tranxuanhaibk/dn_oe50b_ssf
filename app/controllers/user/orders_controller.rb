@@ -1,4 +1,7 @@
 class User::OrdersController < ApplicationController
+  before_action :logged_in_user
+  before_action :load_order, only: :update
+
   def index
     @orders = current_user.orders.date_desc.paginate page: params[:page],
     per_page: Settings.admin_order.per_page
@@ -16,7 +19,27 @@ class User::OrdersController < ApplicationController
     delete_cookie_soccer_field
   end
 
+  def update
+    if @order.update_status params[:stt]
+      flash[:notice] = t ".update_sucess"
+    else
+      flash[:alert] = t ".update_fail"
+    end
+    respond_to do |format|
+      format.html{render user_orders_path}
+      format.json{render json: flash.to_hash}
+    end
+  end
+
   private
+
+  def load_order
+    @order = Order.find_by id: params[:id]
+    return if @order
+
+    flash[:warning] = t "message.update_order.not_exist_id"
+    redirect_to user_orders_path
+  end
 
   def create_order_detail value, ordered, soccer_field
     value.each do |i|
@@ -33,6 +56,6 @@ class User::OrdersController < ApplicationController
   def delete_cookie_soccer_field
     cookies.delete :soccer_fields
     flash[:success] = t "order.success"
-    redirect_to root_path
+    redirect_to user_orders_path
   end
 end

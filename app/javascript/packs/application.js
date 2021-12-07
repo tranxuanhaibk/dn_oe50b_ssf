@@ -12,3 +12,4 @@ import "bootstrap"
 import "application/sweet-alert-confirm"
 require("packs/reply")
 require("packs/handle_request_order")
+require("packs/handle_order_user")

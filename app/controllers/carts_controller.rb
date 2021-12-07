@@ -10,11 +10,10 @@ class CartsController < ApplicationController
   end
 
   def create
-    soccer_field_id = params[:soccer_field_id]
-    soccer_fielded = OrderDetail.find_by(soccer_field_id: soccer_field_id,
+    detail = OrderDetail.find_by(soccer_field_id: params[:soccer_field_id],
       booking_used: params[:time], type_field: params[:type],
       order_date: params[:date])
-    if soccer_fielded.present?
+    if detail.present? && !detail.order.cancel?
       render json: {error: true}
     else
       size_cart = add_product params

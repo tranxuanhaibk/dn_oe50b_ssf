@@ -21,8 +21,8 @@ Rails.application.routes.draw do
       resources :orders, only: %i(index update)
     end
     namespace :user do
-      resources :orders, only: %i(index show create)
-      get "seach_soccer_field_for_order", to: "orders#seach_soccer_field_for_order"
+      resources :orders
+      resources :order_details, only: :destroy
       get "order_soccer_field", to: "orders#order_soccer_field"
     end
   end

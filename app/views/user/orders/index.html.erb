@@ -1,7 +1,12 @@
 <% provide :title, t("admin.manager_booking_field") %>
 <div class="col-lg-9">
+  <div>
+    <h3><%= t ".name_user_order" %><%= current_user.name %></h3>
+     <h5><%= t ".email_user_order" %><%= current_user.email %></h5>
+  </div>
   <table class="table">
-    <%= render "layouts/title" %>
+    <h5 class="text-center" ><%= t ".list_order" %></h5>
+    <%= render "title" %>
     <tbody>
       <%= render @orders %>
     </tbody>
@@ -11,3 +16,4 @@
     <%= will_paginate @orders %>
   </div>
 </div>
+<%= javascript_pack_tag "handle_order_user" %>

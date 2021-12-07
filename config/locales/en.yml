@@ -199,6 +199,39 @@ en:
     create:
       success: "Create Success"
       unsuccess: " Create Account Unsuccess"
+    orders:
+      index:
+        name_user_order: "User Name : "
+        email_user_order: "Email : "
+        list_order: "----YOUR ORDER LIST----"
+      title:
+        order_date: "Date"
+        quantity: "Quantity"
+        total_cost: "Total cost"
+        image: "Image"
+        status: "Status"
+      update:
+        update_sucess: "Update Success"
+        update_fail: "Update Fail"
+      order:
+        order_detail: "Order Detail : "
+        name_user_order: "User Name : "
+        status: "Status : "
+        field: "Field : "
+        price: "Price : "
+        date: "Date : "
+        time: "Time : "
+        type: "Type : "
+        btn_handle: "View status"
+        btn_view: "View"
+        btn_exit: "Exit"
+        btn_cancel: "Cancel"
+        date_format: "%d/%m/%Y"
+        detele_order_detail: "Remove"
+    order_details:
+      destroy:
+        success: "Delete soccer field SUCCESS!"
+        fail: "Delete soccer field FAIL!"
   users:
     index:
       danger:
@@ -328,6 +361,10 @@ en:
       account: "Account"
       logout: "Logout"
       size_cart: "Count cart"
+    sidebar:
+      profile_order: "Information User"
+      manager_order_to_user: "Manager Order Of Me"
+      list_soccer_field: "List Soccer Field"
   search_view:
     title: "Seach Yard"
     h1: "Search Soccer yard"
@@ -352,3 +389,9 @@ en:
     booking_field: "Booking Field Management"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  alert:
+    add_to_cart:
+      fail: "Add to cart FAIL!"
+      order_fail: "The field is already booked, Please choose another course!"
+      order_success: "Successfully placed, Please check and close the order!"
+      ordered: "Football field booked!"
