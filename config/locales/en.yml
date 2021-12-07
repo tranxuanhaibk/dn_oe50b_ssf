@@ -7,6 +7,12 @@ en:
         email: "Email address"
         password: "Password"
         password_confirmation: "Password Confirmation"
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "Unmatched password"
   application:
     check_admin:
       warning: "You not admin!"
@@ -27,8 +33,7 @@ en:
   account_activations_controller:
     account_activate: "Account activated!"
     account_danger: "Invalid activation link"
-  admin_controller:
-    message:
+  message:
       pls_login: "You must be logged in to use the system."
       is_admin: "You are not an admin so you cannot use this function."
   application_controller:
@@ -48,6 +53,8 @@ en:
     cancel: "Cancel"
   home:
     searching: "Searching..."
+    searching: "Search..."
+    address: "Address: "
     log_in: "Log in"
     sign_up: "Register"
     name: "Home"
@@ -78,7 +85,7 @@ en:
     soccer_price: "soccer_price"
     field_name: "soocer_field_name:"
     type_field: "soccer_type"
-    address: "soccer_address"
+    description: "Description"
     soccer_status: "soccer_status"
     price: "soccer_price"
     booking_fields: "Booking"
@@ -96,13 +103,29 @@ en:
     new_h1_html: "Add Soccer Field"
     edit_h1_html: "Update Soccer Field"
     comfirm_delete: "Are you sure ?"
-    detail_booking:
-      detail: "Detail booking"
+    status:
+      pending: "Pending"
+      accept: "Accept"
+      rejected: "Rejected"
+      cancel: "Cancel"
+  order:
+    name: "Order"
+    search: "Seach"
+    title_admin:
+      image: "Image"
+      name: "Name"
+      type: "Type Field"
+      time: "Time"
+      code: "Code Field"
+      price: "Price"
+      date: "Date"
+    detail_order:
+      detail: "Detail order"
       status: "Status:"
-      date_booking: "Date of booking:"
-      time_booking: "Time of booking:"
-      name_booking: "Name of booking:"
-      phone_booking: "Phone of booking:"
+      date_booking: "Date of order:"
+      time_booking: "Time of order:"
+      name_booking: "Name of order:"
+      phone_booking: "Phone of order:"
       field: "Field:"
       time: "Time slot:"
       code: "Field code:"
@@ -110,36 +133,21 @@ en:
       btn_submit: "Accept"
       btn_cancel: "Reject"
       btn_exit: "Exit"
-      action: "Action"
-    btn_handle: "Handle"
-    btn_view: "View"
-    status:
-      pending: "Pending"
-      accept: "Accept"
-      rejected: "Rejected"
-      cancel: "Cancel"
-    title_admin:
-      image: "Image"
-      name: "Name"
-      type: "Type Field"
-      time: "Time"
-      code: "Code Soccer Field"
-    update_booking:
-      not_exist_id: "Order id not found!"
-      update_sucess: "Order processing successfully!"
-      update_fail: "Order processing failed!"
   login:
     name: "Login"
   sign_up:
     name: "Register"
   detail:
-    choose: "Choose the yard"
+    choose: "Choose the soccer fields"
     date: "Date"
     time: "Time"
     type: "Type"
     comment: "Comment"
     reply: "reply"
     name: "Detail"
+  search_view:
+    title: "Seach Fields"
+    h1: "Search Soccer Fields"
   district:
     tk: "Thanh Khe District"
     st: "Son Tra District"
@@ -154,6 +162,8 @@ en:
       success: "Create Success"
       unsuccess: " Create Account Unsuccess"
   users:
+    index:
+      danger:
     user:
       delete: "Delete"
       edit: "Edit"
@@ -198,8 +208,28 @@ en:
       warning: "User not found"
   shared:
     error_messages:
-      contains: "Biểu mẫu chứa %{errors}"
-      error: "Lỗi"
+      contains: "The form contains %{errors}"
+      error: "error"
+  message:
+    pls_login: "You must be logged in to use the system."
+    is_admin: "You are not an admin so you cannot use this function."
+    update_location: "locations was updated."
+    update_fail: "Update fail"
+    fail: "Unable to execute request, try again"
+    update_order:
+      not_exist_id: "Order id not found!"
+      update_sucess: "Order processing successfully!"
+      update_fail: "Order processing failed!"
+      contains: "The form contains %{errors}"
+      error: "error"
+    show_field:
+      not_exist_yard: "Field is not found!"
+    order:
+      pls_login: "You must be logged in to booking yard"
+      order_succ: "Booking success"
+      order_fail: "Booking failed"
+      order_succ_mess: "Thank you for choosing our soccer field!"
+      order_fail_mess: "There was an error in the system, please try again later!"
   asession:
     show:
       warning: "No user found"
@@ -215,10 +245,10 @@ en:
     or: "OR"
     facebook: "Sign in with Facebook"
     google: "Sign in with Google"
-  create:
-    invalid: "Invalid email/password combination"
-  check_activated:
-    warning: "Account not activated. Check your email for the activation link."
+    create:
+      invalid: "Invalid email/password combination"
+    check_activated:
+      warning: "Account not activated. Check your email for the activation link."
   form:
     session:
       password: "Password"
@@ -259,16 +289,24 @@ en:
       settings: "Settings"
       account: "Account"
       logout: "Logout"
-  admin:
-    manager_title: "Manager Soccer Fields Sun*"
-    manager_booking_field: "Manager booking field"
-    manager_user: "Manager user"
-    manager_revenue: "Manager revenue"
-    manager_field: "Manager field"
+      size_cart: "Count cart"
   search_view:
     title: "Seach Yard"
     h1: "Search Soccer yard"
-  menu_manager:
-    booking_field: "Booking Field Management"
-  date_format: "%d/%m/%Y"
-  time_format: "%k:%M"
+  static_pages:
+    form_search_for_order:
+      add_to_cart: "Add to cart"
+    show:
+      field_name: "Name : "
+      description: "Description"
+      price: "Price : "
+  carts:
+    index:
+      cart_empty: "The cart is empty!"
+      title: "Order Detail"
+      name: "Name"
+      type: "Type"
+      time: "Time"
+      date: "Date"
+      order: "Book"
+      price: "Price"

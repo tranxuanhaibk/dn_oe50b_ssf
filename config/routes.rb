@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :users
     resources :password_resets, only: %i(new create edit update)
     resources :static_pages, only: %i(index show)
+    resources :carts
     namespace :admin do
       resources :soccer_fields, except: %i(show)
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"
