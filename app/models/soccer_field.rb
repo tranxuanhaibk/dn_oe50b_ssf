@@ -1,6 +1,7 @@
 class SoccerField < ApplicationRecord
   has_many :order_details, dependent: :destroy
   has_many :soccer_rates, dependent: :destroy
+  has_many :comments, dependent: :destroy
   scope :order_by_field_name, ->{order :field_name}
   validates :field_name, length:
                          {maximum: Settings.model.profile.name_length_max_50},
@@ -12,7 +13,8 @@ class SoccerField < ApplicationRecord
   enum type_field: {five: 0, seven: 1, elevent: 2}
 
   validates :price, numericality: {only_integer: true,
-                                   greater_than_or_equal_to: 0},
+                                   greater_than_or_equal_to: 100_00,
+                                   less_than_or_equal_to: 100_000},
                     allow_blank: true
 
   scope :search_name, (lambda do |pr|

@@ -4,12 +4,13 @@
   <%= l.text_field :field_name, class: "form-control" %>
 
   <%= l.label :type_field, t("booking.type_field") %>
-  <%= select_tag :type_field, raw("<option selected='selected'>five</option><option>seven</option><option>elevent</option>") %>
+  <%= l.select :type_field, raw("<option selected='selected'>five</option><option>seven</option><option>elevent</option>") %>
 
   <%= l.label :description, t("booking.description") %>
   <%= l.text_field :description, class: "form-control" %>
 
   <%= l.label :price, t("booking.price") %>
-  <%= select_tag :price, raw("<option selected='selected'>fifty</option><option>seventy</option><option>one_hundred</option>") %>
+  <%= l.text_field :price, class: "form-control" %>
+
   <%= l.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

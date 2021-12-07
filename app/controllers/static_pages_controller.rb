@@ -9,6 +9,8 @@ class StaticPagesController < ApplicationController
   def show
     soccer_fields = SoccerField.pluck(:id)
     @booking_used = OrderDetail.all_time(soccer_fields).pluck(:booking_used)
+    @comments = @soccer_field.comments.newest
+    @comment = Comment.new
   end
 
   private

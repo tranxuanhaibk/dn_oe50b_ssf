@@ -12,9 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2021_12_06_040925) do
 
-  create_table "order_details", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "soccer_field_id", null: false
+  create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "soccer_field_id", null: false
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["soccer_field_id"], name: "index_comments_on_soccer_field_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "order_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "soccer_field_id", null: false
     t.bigint "current_price"
     t.string "booking_used"
     t.integer "type_field"
@@ -25,8 +35,8 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
     t.index ["soccer_field_id"], name: "index_order_details_on_soccer_field_id"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.integer "quantity"
     t.integer "status"
     t.bigint "total_cost"
@@ -37,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "soccer_fields", force: :cascade do |t|
+  create_table "soccer_fields", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "field_name"
     t.integer "type_field"
     t.bigint "price"
@@ -48,10 +58,9 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
     t.string "code"
   end
 
-  create_table "soccer_rates", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "soccer_field_id", null: false
-    t.text "comment"
+  create_table "soccer_rates", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "soccer_field_id", null: false
     t.integer "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -59,7 +68,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
     t.index ["user_id"], name: "index_soccer_rates_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.string "email"
@@ -77,6 +86,8 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
     t.datetime "reset_sent_at"
   end
 
+  add_foreign_key "comments", "soccer_fields"
+  add_foreign_key "comments", "users"
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "soccer_fields"
   add_foreign_key "orders", "users"
