@@ -1,8 +1,8 @@
-<tr class="table-<%= handle_layout order.status %> hide-detail-id-<%= order.id %>">
+<tr class="table-<%= handle_layout order.status %>">
   <td><img src="/assets/anh01.jpeg" alt="San1" class="img-booking"></td>
   <td><%= order.quantity %></td>
   <td><%= order.total_cost %></td>
-  <td><%= order.created_at.strftime(t(".date_format")) %></td>
+  <td><%= t(order.created_at, format: :short) %></td>
   <td>
     <% if order.pending? %>
       <%= button_tag t(".btn_handle"), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
@@ -38,7 +38,7 @@
               </h5>
               <h5>
                 <%= t(".date") %>
-                <%= order_detail.order_date.strftime(t(".date_format")) %>
+                <%= t(order_detail.order_date, format: :long) %>
               </h5>
               <h5>
                 <%= t(".type") %>
