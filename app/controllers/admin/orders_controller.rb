@@ -1,6 +1,5 @@
 class Admin::OrdersController < ApplicationController
-  before_action :load_order, only: :update
-
+  before_action :load_order, :check_status_order, only: :update
   def index
     @orders = Order.status_asc.paginate page: params[:page],
       per_page: Settings.admin_order.per_page
@@ -8,6 +7,7 @@ class Admin::OrdersController < ApplicationController
 
   def update
     if @order.update_status params[:stt]
+      send_mail_when_order
       flash[:notice] = t "booking.update_booking.update_sucess"
     else
       flash[:alert] = t "booking.update_booking.update_fail"
@@ -26,5 +26,19 @@ class Admin::OrdersController < ApplicationController
 
     flash[:warning] = t "booking.update_booking.not_exist_id"
     redirect_to admin_orders_path
+  end
+
+  def check_status_order
+    return if @order.pending? || @order.accept?
+
+    flash[:warning] = t "booking.update_booking.check_status"
+    redirect_to admin_orders_path
+  end
+
+  def send_mail_when_order
+    return unless %w(accept rejected cancel).include? @order.status
+
+    UserMailer.send("#{@order.status}_order_by_admin".to_sym, @order)
+              .deliver_later
   end
 end

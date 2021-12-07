@@ -47,6 +47,9 @@ en:
     hi: "Hi"
     text_activate: "elcome to the Sun Soccer Field! Click on the link below to activate your account:"
     ativate_link: "Activate"
+    sub_cancel: "Notification cancel booking!"
+    sub_accept: "Notification booking success!"
+    sub_rejected: "Confirm booking failure!"
   search:
     danger: "empty data"
     success: "Search success"
@@ -111,6 +114,7 @@ en:
     update_booking:
       not_exist_id: "Order id not found!"
       update_sucess: "Order processing successfully!"
+      check_status: "Orders have been processed by the admin"
     detail_booking:
       detail: "Detail booking"
       status: "Status:"
@@ -395,3 +399,10 @@ en:
       order_fail: "The field is already booked, Please choose another course!"
       order_success: "Successfully placed, Please check and close the order!"
       ordered: "Football field booked!"
+  send_email:
+    link: "Link"
+    greeting_user: "Hello! User."
+    detail: "Detail"
+    title_booking: "Click on the link to view"
+    content_reject: "Admin has rejected a field"
+    content_cancel_admin: "Admin has canceled a field"

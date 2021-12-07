@@ -1,0 +1,31 @@
+<h5>
+  <%= t("booking.detail_booking.name_booking") %>
+  <%= @order.user_name %>
+</h5>
+<h5>
+  <%= t("booking.detail_booking.phone_booking") %>
+  <%= @order.user_phone %>
+</h5>
+<% @order.order_details.each do |order_detail|%>
+  <h5>
+    <%= t("booking.detail_booking.fieldid") %>
+    <%= order_detail.id %>
+  </h5>
+  <h5>
+    <%= t("booking.detail_booking.date_booking") %>
+    <%= order_detail.order_date.strftime(t("date_format")) %>
+  </h5>
+  <h5>
+    <%= t("booking.detail_booking.field") %>
+    <%=
+    order_detail.soccer_field.field_name %>
+  </h5>
+  <h5>
+    <%= t("booking.detail_booking.time") %>
+    <%= order_detail.booking_used %>
+  </h5>
+  <h5>
+    <%= t("booking.detail_booking.cost") %>
+    <%= order_detail.current_price %>
+  </h5>
+<%end%>

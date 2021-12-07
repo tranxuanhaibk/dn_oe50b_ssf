@@ -4,7 +4,8 @@ class Order < ApplicationRecord
 
   validates :quantity, presence: true, allow_blank: true
   enum status: {pending: 0, accept: 1, rejected: 2, cancel: 3}
-  delegate :booking_used, :current_price, to: :order_details, prefix: true
+  delegate :booking_used, :current_price, to: :order_detail, prefix: true
+  delegate :name, :phone, to: :user, prefix: true
 
   scope :status_asc, ->{order status: :asc}
   scope :date_desc, ->{order created_at: :desc}
