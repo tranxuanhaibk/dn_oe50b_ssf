@@ -44,6 +44,7 @@ en:
       danger: "Please login !"
   user_mailer:
     activate: "Account activation"
+    password_reset: "Password reset"
     hi: "Hi"
     text_activate: "elcome to the Sun Soccer Field! Click on the link below to activate your account:"
     ativate_link: "Activate"

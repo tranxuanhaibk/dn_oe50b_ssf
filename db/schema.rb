@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 2021_12_06_040925) do
   create_table "soccer_rates", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "soccer_field_id", null: false
-    t.text "comment"
     t.integer "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
