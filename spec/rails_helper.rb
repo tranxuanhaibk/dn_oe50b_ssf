@@ -1,4 +1,5 @@
 require "spec_helper"
+require "shoulda/matchers"
 require "support/database_cleaner"
 ENV["RAILS_ENV"] ||= "test"
 require "shoulda/matchers"
