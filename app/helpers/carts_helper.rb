@@ -25,6 +25,7 @@ module CartsHelper
   end
 
   def size_cart
+    @soccer_fields = cookies[:soccer_fields]
     return 0 if @soccer_fields.blank?
 
     JSON.parse(cookies[:soccer_fields]).values.flatten.size

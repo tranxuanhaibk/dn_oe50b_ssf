@@ -141,6 +141,7 @@ vi:
       btn_submit: "Đồng ý"
       btn_cancel: "Hủy đơn"
       btn_exit: "Thoát"
+    success: "Đặt sân bóng thành công"
   login:
     name: "Đăng nhập"
     click: "Nhấp vào đây"

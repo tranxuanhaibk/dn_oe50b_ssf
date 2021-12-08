@@ -30,6 +30,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "pry"
 end
 
 group :development do

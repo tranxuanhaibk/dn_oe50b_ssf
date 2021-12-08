@@ -158,6 +158,7 @@ en:
       btn_submit: "Accept"
       btn_cancel: "Reject"
       btn_exit: "Exit"
+    success: "Order soccer field Successed"
   login:
     name: "Login"
     click: "Click here"
