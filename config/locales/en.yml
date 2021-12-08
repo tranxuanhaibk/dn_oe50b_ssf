@@ -118,6 +118,7 @@ en:
       time_booking: "Time of booking:"
       name_booking: "Name of booking:"
       phone_booking: "Phone of booking:"
+      fieldid: "Order detail id :"
       field: "Field:"
       time: "Time slot:"
       code: "Field code:"
@@ -133,6 +134,13 @@ en:
       accept: "Accept"
       rejected: "Rejected"
       cancel: "Cancel"
+    title_admin:
+      image: "Image"
+      name: "Name"
+      type: "Type Field"
+      time: "Time"
+      order_date: "Order Date"
+      user_order: "User Order"
   order:
     name: "Order"
     search: "Seach"
@@ -340,3 +348,7 @@ en:
       date: "Date"
       order: "Book"
       price: "Price"
+  menu_manager:
+    booking_field: "Booking Field Management"
+  date_format: "%d/%m/%Y"
+  time_format: "%k:%M"
