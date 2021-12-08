@@ -11,6 +11,7 @@ $(document).ready(function() {
       dataType: 'JSON'
     }).done(function (data) {
       alert(data.notice);
+      location.reload();
     }).fail(function (data) {
       alert(data.alert);
     });
@@ -26,6 +27,7 @@ $(document).ready(function() {
       dataType: 'JSON'
     }).done(function (data) {
       alert(data.success);
+      location.reload();
     }).fail(function (data) {
       alert(data.danger);
     });
