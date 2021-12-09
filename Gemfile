@@ -23,11 +23,14 @@ gem "webpacker", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "i18n-js"
 
 group :development, :test do
+  gem "factory_bot_rails"
+  gem "shoulda-matchers", "~> 4.0"
+  gem "rspec-rails", "~> 4.0.1"
   gem "simplecov-rcov"
   gem "simplecov"
-  gem "rspec-rails", "~> 4.0.1"
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
@@ -45,7 +48,9 @@ end
 group :test do
   gem "capybara", ">= 3.26"
   gem "database_cleaner"
+  gem "rails-controller-testing"
   gem "selenium-webdriver"
+  gem "database_cleaner-active_record"
   gem "webdrivers"
 end
 

@@ -9,9 +9,4 @@ class OrderDetail < ApplicationRecord
   scope :all_time, ->(param){where("soccer_field_id IN (?)", param).distinct}
   scope :find_orders, ->(order_id){where("order_id = ?", order_id)}
   scope :find_sum_order, ->{group(:order_id).sum(:current_price)}
-
-  scope :booking_used_soccer_field, (lambda do |soccer_field_ids, booking_used|
-    where("soccer_field_id IN (?) AND booking_used = ?",
-          soccer_field_ids, booking_used)
-  end)
 end

@@ -2,7 +2,11 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :order_details, dependent: :destroy
 
-  validates :quantity, presence: true, allow_blank: true
+  validates :quantity, numericality:
+                       {only_integer: true,
+                        greater_than_or_equal_to:
+                          Settings.model.order.quantity_min},
+                        presence: true
   enum status: {pending: 0, accept: 1, rejected: 2, cancel: 3}
   delegate :booking_used, :current_price, to: :order_detail, prefix: true
   delegate :name, :phone, to: :user, prefix: true
