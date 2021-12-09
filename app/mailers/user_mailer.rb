@@ -8,4 +8,18 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Password reset"
   end
+
+  %w(cancel accept rejected).each do |order_status|
+    define_method("#{order_status}_order_by_admin".to_sym) do |order|
+      handle_send_mail(order, t("user_mailer.sub_#{order_status}"))
+    end
+  end
+
+  private
+
+  def handle_send_mail order, subject_text
+    @user = order.user
+    @order = order
+    mail to: @user.email, subject: subject_text
+  end
 end

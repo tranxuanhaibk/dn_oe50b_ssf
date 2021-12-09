@@ -50,13 +50,16 @@
               </h5>
               <h5>
                 <%= t("booking.detail_booking.field") %>
-                <%= order_detail&.soccer_field.field_name %></h5>
+                <%= order_detail&.soccer_field.field_name %>
+              </h5>
               <h5>
                 <%= t("booking.detail_booking.time") %>
-                <%= order_detail.booking_used %></h5>
+                <%= order_detail.booking_used %>
+              </h5>
               <h5>
                 <%= t("booking.detail_booking.cost") %>
-                <%= order_detail.current_price %></h5>
+                <%= order_detail.current_price %>
+              </h5>
             <% end %>
           </div>
           <div class="modal-footer">
@@ -67,6 +70,9 @@
               <%= button_tag t("booking.detail_booking.btn_cancel"),
               type: "button", class: "btn btn-danger handle-request-order",
               data: {id: "#{order.id}", stt: "rejected"} %>
+            <% end %>
+            <% if order.accept? %>
+              <%= button_tag t("booking.detail_booking.btn_cancel"), type: "button", class: "btn btn-danger handle-request-order", data: {id: "#{order.id}", stt: "cancel"} %>
             <% end %>
             <%= button_tag t("booking.detail_booking.btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
           </div>

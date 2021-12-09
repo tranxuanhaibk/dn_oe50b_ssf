@@ -11,9 +11,9 @@ $(document).ready(function() {
       dataType: 'JSON'
     }).done(function (data) {
       alert(data.notice);
+      window.location.reload();
     }).fail(function (data) {
       alert(data.alert);
     });
-    soccer_field.reload();
   });
 })

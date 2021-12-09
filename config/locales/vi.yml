@@ -47,6 +47,9 @@ vi:
     hi: "Chào"
     text_activate: "chào mừng bạn đến với Sun Soccer Field! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
     ativate_link: "Kích hoạt"
+    sub_cancel: "Thông báo hủy đặt sân từ quản trị viên!"
+    sub_accept: "Thông báo đặt sân thành công!"
+    sub_rejected: "Thông báo về việc từ chối đặt sân từ quản trị viên!"
   search:
     danger: "Dữ liệu nhập trống"
     success: "tìm kiếm thành công"
@@ -110,6 +113,7 @@ vi:
     update_booking:
       not_exist_id: "Không tìm thấy id sân"
       update_sucess: "Xử lý sân thành công"
+      check_status: "Đơn hàng dã được admin xử lý."
     detail_booking:
       detail: "Chi tiết đặt sân"
       status: "Trạng thái:"
@@ -409,3 +413,10 @@ vi:
       order_fail: "Sân đã có người đặt, Vui lòng chọn sân khác!"
       order_success: "Đặt thành công, Vùi lòng kiểm tra và Chốt đơn!"
       ordered: "Sân đã đặt!"
+  send_email:
+    link: "Đường dẫn"
+    greeting_user: "Xin chào! Người dùng."
+    detail: "Chi tiết"
+    title_booking: "Nhấn vào đường dẫn để xem"
+    content_reject: "Quản trị viên đã từ chối việc đặt sân của bạn."
+    content_cancel_admin: "Quản trị viên đã hủy bỏ việc đặt sân."
