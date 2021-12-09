@@ -232,6 +232,9 @@ en:
       destroy:
         success: "Delete soccer field SUCCESS!"
         fail: "Delete soccer field FAIL!"
+        btn_exit: "Exit"
+        btn_cancel: "Cancel"
+        date_format: "%d/%m/%Y"
   users:
     index:
       danger:
@@ -387,8 +390,16 @@ en:
       price: "Price"
   menu_manager:
     booking_field: "Booking Field Management"
-  date_format: "%d/%m/%Y"
-  time_format: "%k:%M"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d/%m/%Y"
+      long: "%B %d, %Y"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%H:%M"
   alert:
     add_to_cart:
       fail: "Add to cart FAIL!"

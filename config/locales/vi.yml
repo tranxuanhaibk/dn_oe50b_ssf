@@ -235,6 +235,9 @@ vi:
       destroy:
         success: "Xóa sân bóng THÀNH CÔNG!"
         fail: "Xóa sân bóng THẤT BẠI!"
+        btn_exit: "Thoát"
+        btn_cancel: "Hủy đơn"
+        date_format: "%d/%m/%Y"
   users:
     user:
       delete: "Xóa"
@@ -390,6 +393,16 @@ vi:
     booking_field: "Quản lý đặt sân"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d/%m/%Y"
+      long: "%B %d, %Y"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%H:%M"
   alert:
     add_to_cart:
       fail: "Thêm giỏ hàng Thất Bại!"
