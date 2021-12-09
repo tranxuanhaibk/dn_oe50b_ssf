@@ -1,58 +1,67 @@
-<tr class="table-<%= handle_layout order.status %>">
-  <td ><%= order&.soccer_field_field_name %></td>
-  <td><%= order&.soccer_field_type_field %></td>
-  <td><%= order&.order_detail_booking_used %></td>
+<tr class="table-<%= handle_layout order.status %> hide-detail-id-<%= order.id %>">
+  <td><img src="/assets/anh01.jpeg" alt="San1" class="img-booking"></td>
+  <td><%= order.quantity %></td>
+  <td><%= order.total_cost %></td>
+  <td><%= order.created_at.strftime(t(".date_format")) %></td>
   <td>
     <% if order.pending? %>
-      <%= button_tag t("order.btn_handle"), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
+      <%= button_tag t(".btn_handle"), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% else %>
-      <%= button_tag t("order.btn_view"), type: "button", class: "btn btn-primary", data: {toggle: "modal", target: "#model#{order.id}"} %>
+      <%= button_tag t(".btn_view"), type: "button", class: "btn btn-primary", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% end %>
     <!-- Button handle order -->
     <div class="modal fade" id="model<%= order.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">order.detail_order.detail:</h5>
+            <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">
+              <%= t(".order_detail") %></br>
+              <%= t(".name_user_order") %><%= current_user.name %>
+            </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body text-left">
             <h3 class="text-center font-weight-bold">
-              <%= t("order.detail_booking.status") %>
+              <%= t(".status") %>
               <%= handle_name_status order.status %>
             </h3>
-            <h5>
-            <%= t("order.detail_order.date_order" %>
-              <%= order&.created_at.strftime("%d/%m/%Y") %>
-            </h5>
-            <h5>
-            <%= t("order.detail_order.time_order" %>
-              <%= order&.created_at.strftime("%k:%M") %>
-            </h5>
-            <h5>
-            <%= t("order.detail_order.field") %>
-              <%= order&.soccer_field_field_name %>
+            <% order.order_details.each do |order_detail| %>
+              <h5>
+                <%= t(".field") %>
+                <%= order_detail.id %>
               </h5>
-            <h5>
-              <%= t("order.detail_order.date") %>
-              <%= order&.order_date %>
-            </h5>
-            <h5>
-              <%= t("order.detail_order.time") %>
-              <%= order&.order_detail_booking_used %>
-            </h5>
-            <h5>
-              <%= t("order.detail_order.cost") %>
-              <%= order&.order_detail_current_price %> VND
-            </h5>
+              <h5>
+                <%= t(".time") %>
+                <%= order_detail.booking_used %>
+              </h5>
+              <h5>
+                <%= t(".date") %>
+                <%= order_detail.order_date.strftime(t(".date_format")) %>
+              </h5>
+              <h5>
+                <%= t(".type") %>
+                <%= order_detail.type_field %>
+              </h5>
+              <h5>
+                <%= t(".price") %>
+                <%= order_detail.current_price %> VND
+                <p>--------------------*****--------------------</p>
+              </h5>
+              <h5>
+                <%= button_tag t(".detele_order_detail"),type: "button",
+                  class: "btn btn-danger handle-delete-order-detail",
+                  data: {id: "#{order_detail.id}", dismiss: "modal"} %>
+              </h5>
+            <%end%>
           </div>
           <div class="modal-footer">
             <% unless order.cancel? || order.rejected? %>
-              <%= button_tag t("order.detail_order.btn_cancel"), type: "button", class: "btn btn-danger" %>
+              <%= button_tag t(".btn_cancel"),type: "button", class: "btn btn-danger handle-order-user",
+                      data: {id: "#{order.id}", stt: "cancel", dismiss: "modal"} %>
             <% end %>
-            <%= button_tag t("order.detail_order.btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
+            <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
           </div>
         </div>
       </div>

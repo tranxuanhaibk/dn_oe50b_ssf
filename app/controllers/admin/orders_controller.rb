@@ -1,5 +1,6 @@
 class Admin::OrdersController < ApplicationController
   before_action :load_order, only: :update
+
   def index
     @orders = Order.status_asc.paginate page: params[:page],
       per_page: Settings.admin_order.per_page

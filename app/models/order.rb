@@ -4,7 +4,7 @@ class Order < ApplicationRecord
 
   validates :quantity, presence: true, allow_blank: true
   enum status: {pending: 0, accept: 1, rejected: 2, cancel: 3}
-  delegate :booking_used, :current_price, to: :order_detail, prefix: true
+  delegate :booking_used, :current_price, to: :order_details, prefix: true
 
   scope :status_asc, ->{order status: :asc}
   scope :date_desc, ->{order created_at: :desc}
@@ -17,5 +17,9 @@ class Order < ApplicationRecord
 
   def update_status status
     update_column(:status, status)
+  end
+
+  def update_order_new quantity, total_cost
+    update_columns quantity: quantity, total_cost: total_cost
   end
 end

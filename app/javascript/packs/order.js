@@ -87,13 +87,13 @@ $('.shopping').on('click', function () {
     },
     success: function (data) {
       if(data.error) {
-        alert("San nay da co nguoi dat, vui long thu lai!");
+        alert(I18n.t("alert.add_to_cart.order_fail"));
       };
       if(!data.size_cart) {
-        alert("Ban da dat san nay roi!");
+        alert(I18n.t("alert.add_to_cart.ordered"));
       };
       if(data.size_cart > 0) {
-        alert("Dat thanh cong, vui long chot don de giu san!");
+        alert(I18n.t("alert.add_to_cart.order_success"));
       };
     },
     error: function () {
