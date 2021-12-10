@@ -73,4 +73,3 @@ yarn-debug.log*
 .browserslistrc
 config/credentials.yml.enc
 config/database.yml
-
