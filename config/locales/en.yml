@@ -172,9 +172,10 @@ en:
       btn_cancel: "Reject"
       btn_exit: "Exit"
     success: "Order soccer field Successed"
-  login:
-    name: "Login"
-    click: "Click here"
+  comments:
+    form:
+      name: "Please log in to comment"
+      click: "Click here!"
   sign_up:
     name: "Register"
   detail:
@@ -209,6 +210,9 @@ en:
         name_user_order: "User Name : "
         email_user_order: "Email : "
         list_order: "----YOUR ORDER LIST----"
+      destroy:
+        success: "Delete order SUCCESS!"
+        fail: "Delete order FAIL!"
       title:
         order_date: "Date"
         quantity: "Quantity"
@@ -227,9 +231,10 @@ en:
         date: "Date : "
         time: "Time : "
         type: "Type : "
-        btn_handle: "View status"
-        btn_view: "View"
+        btn_handle: "Pending"
+        btn_cancelled: "Cancelled"
         btn_exit: "Exit"
+        btn_delete: "Delete"
         btn_cancel: "Cancel"
         date_format: "%d/%m/%Y"
         detele_order_detail: "Remove"
@@ -387,6 +392,9 @@ en:
       field_name: "Name : "
       description: "Description"
       price: "Price : "
+      condition: "Condition of the football field"
+      good: "Good"
+      not_good: "Not good"
   carts:
     index:
       cart_empty: "The cart is empty!"

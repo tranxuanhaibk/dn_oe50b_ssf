@@ -2,22 +2,30 @@
   <%= render "slide" %>
 
   <!-- title yard-->
-  <div class="row">
-    <h3><%= t(".field_name") %><%= @soccer_field.field_name %></h3>
+    <div class="center">
+    <h2 class="font-weight-bold"><%= @soccer_field.field_name %></h2>
   </div>
-
   <div class="row">
+    <a href="#">
+      <img class="img-fluid border border-dark rounded" src="/assets/anh05.jpg" alt="">
+    </a>
+  </div>
+  <div class="row pt-5">
     <h5><%= t(".price") %><%= @soccer_field.price %> VND</h5>
   </div>
-  <!-- Rating -->
   <div class="row">
-    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    <h5><%= t(".condition") %> :
+      <% if @soccer_field.status == "over" %>
+        <%= t(".good") %>
+      <%else%>
+        <%= t(".not_good") %>
+      <%end%>
+    </h5>
   </div>
-
-    <div class="col-xl-12">
+  <div class="row pt-4">
     <p class="content-yard">
-      <h4><%= t(".description") %></h4>
-      <h5><%= @soccer_field.description %></br>
+      <h4 class="font-weight-bold"><%= t(".description") %></h4>
+      <h5 class="col-lg-12"><%= @soccer_field.description %></h5>
     </p>
   </div>
 
@@ -29,6 +37,9 @@
   <!-- Comment -->
   <div class="row">
     <%= render "comments/form" %>
+    <div class="font-weight-bold col-md-3">
+      <h3>Bình luận</h3>
+    </div>
     <%= render @comments %>
   </div>
 </div>
