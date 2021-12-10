@@ -25,6 +25,8 @@ gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do
+  gem "simplecov-rcov"
+  gem "simplecov"
   gem "rspec-rails", "~> 4.0.1"
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
@@ -42,6 +44,7 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
+  gem "database_cleaner"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
