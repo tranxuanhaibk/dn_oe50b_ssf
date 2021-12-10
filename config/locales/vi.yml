@@ -313,17 +313,21 @@ vi:
     show:
       warning: "Không tìm thấy người dùng"
   sessions:
-    title: "Đăng Nhập"
-    h1: "Đăng Nhập"
+    new:
+      email: "Địa chỉ email"
+      password: "Mật Khẩu"
+      forgot_password: "(Quên mật khẩu)"
+      login: "Đăng Nhập"
+      title: "Đăng Nhập"
+      remember: "Ghi nhớ mật khẩu"
+      facebook: "Đăng nhập bằng Facebook"
+      google: "Đăng nhập bằng  Google"
+      new_user: "Người dùng mới?"
+      or: "Hoặc"
+      sign_up_now: "Đăng ký ngay!"
     login: "Đăng Nhập"
-    new_user: "Người dùng mới?"
-    signup: "Đăng ký"
-    remember: "Ghi nhớ mật khẩu"
-    email: "địa chỉ email"
+    email: "Địa chỉ email"
     password: "Mật Khẩu"
-    or: "Hoặc"
-    facebook: "Đăng nhập bằng Facebook"
-    google: "Đăng nhập bằng  Google"
     create:
       invalid: "Sai email hoặc mật khẩu"
     check_activated:
@@ -420,3 +424,5 @@ vi:
     title_booking: "Nhấn vào đường dẫn để xem"
     content_reject: "Quản trị viên đã từ chối việc đặt sân của bạn."
     content_cancel_admin: "Quản trị viên đã hủy bỏ việc đặt sân."
+  email_password_invalid: "Email hoặc mật khẩu không hợp lệ"
+  not_account_admin: "Bạn không thể tạo tài khoản giống admin"

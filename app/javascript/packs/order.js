@@ -95,6 +95,7 @@ $('.shopping').on('click', function () {
       if(data.size_cart > 0) {
         alert(I18n.t("alert.add_to_cart.order_success"));
       };
+      window.location.reload();
     },
     error: function () {
       alert(I18n.t("alert.add_to_cart.fail"));
