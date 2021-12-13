@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     return if logged_in?
 
     store_location
-    flash[:danger] = t ".danger"
+    flash[:danger] = t "application.logged_in_user.danger"
     redirect_to login_path
   end
 
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   def check_admin
     return if current_user.admin?
 
-    flash[:warning] = t ".warning"
+    flash[:warning] = t "application.check_admin.warning"
     redirect_to root_path
   end
 end

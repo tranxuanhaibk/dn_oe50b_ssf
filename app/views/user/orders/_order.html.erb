@@ -2,12 +2,12 @@
   <td><img src="/assets/anh01.jpeg" alt="San1" class="img-booking"></td>
   <td><%= order.quantity %></td>
   <td><%= order.total_cost %></td>
-  <td><%= t(order.created_at, format: :short) %></td>
+  <td><%= l(order.created_at, format: :short) %></td>
   <td>
     <% if order.pending? %>
-      <%= button_tag t(".btn_handle"), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
+      <%= button_tag (t(".btn_handle")), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% else %>
-      <%= button_tag t(".btn_view"), type: "button", class: "btn btn-primary", data: {toggle: "modal", target: "#model#{order.id}"} %>
+      <%= button_tag t(".btn_cancelled"), type: "button", class: "btn btn-primary", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% end %>
     <!-- Button handle order -->
     <div class="modal fade" id="model<%= order.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -30,7 +30,7 @@
             <% order.order_details.each do |order_detail| %>
               <h5>
                 <%= t(".field") %>
-                <%= order_detail.id %>
+                <%= order_detail.soccer_field.field_name %>
               </h5>
               <h5>
                 <%= t(".time") %>
@@ -38,7 +38,7 @@
               </h5>
               <h5>
                 <%= t(".date") %>
-                <%= t(order_detail.order_date, format: :long) %>
+                <%= l(order_detail.order_date, format: :short) %>
               </h5>
               <h5>
                 <%= t(".type") %>
@@ -50,18 +50,24 @@
                 <p>--------------------*****--------------------</p>
               </h5>
               <h5>
-                <%= button_tag t(".detele_order_detail"),type: "button",
-                  class: "btn btn-danger handle-delete-order-detail",
-                  data: {id: "#{order_detail.id}", dismiss: "modal"} %>
+                <% if order.pending? %>
+                  <%= button_tag t(".detele_order_detail"),type: "button",
+                    class: "btn btn-danger handle-delete-order-detail",
+                    data: {id: "#{order_detail.id}", dismiss: "modal"} %>
+                <% end %>
               </h5>
             <%end%>
           </div>
           <div class="modal-footer">
-            <% unless order.cancel? || order.rejected? %>
+            <% if order.pending? %>
               <%= button_tag t(".btn_cancel"),type: "button", class: "btn btn-danger handle-order-user",
-                      data: {id: "#{order.id}", stt: "cancel", dismiss: "modal"} %>
+                data: {id: "#{order.id}", stt: "cancel", dismiss: "modal"} %>
+               <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
+            <% else %>
+              <%= button_tag t(".btn_delete"),type: "button",class: "btn btn-danger handle-delete-order",
+                data: {id: "#{order.id}", dismiss: "modal"} %>
+              <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
             <% end %>
-            <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
           </div>
         </div>
       </div>

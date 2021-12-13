@@ -1,6 +1,6 @@
 class User::OrdersController < ApplicationController
   before_action :logged_in_user
-  before_action :load_order, only: :update
+  before_action :load_order, only: %i(destroy update)
 
   def index
     @orders = current_user.orders.date_desc.paginate page: params[:page],
@@ -24,6 +24,20 @@ class User::OrdersController < ApplicationController
       flash[:notice] = t ".update_sucess"
     else
       flash[:alert] = t ".update_fail"
+    end
+    respond_to do |format|
+      format.html{render user_orders_path}
+      format.json{render json: flash.to_hash}
+    end
+  end
+
+  def destroy
+    ActiveRecord::Base.transaction do
+      if @order&.destroy
+        flash[:success] = t ".success"
+      else
+        flash[:danger] = t ".fail"
+      end
     end
     respond_to do |format|
       format.html{render user_orders_path}

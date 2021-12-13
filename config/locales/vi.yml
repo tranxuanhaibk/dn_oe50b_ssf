@@ -174,9 +174,10 @@ vi:
       btn_cancel: "Hủy đơn"
       btn_exit: "Thoát"
     success: "Đặt sân bóng thành công"
-  login:
-    name: "Đăng nhập"
-    click: "Nhấp vào đây"
+  comments:
+    form:
+      name: "Vui lòng đăng nhập để bình luận"
+      click: "Nhấp vào đây!"
   sign_up:
     name: "Đăng ký"
   detail:
@@ -211,6 +212,9 @@ vi:
         name_user_order: "Tên khách hàng : "
         email_user_order: "Địa chỉ Email : "
         list_order: "----DANH SÁCH ĐƠN CỦA BẠN----"
+      destroy:
+        success: "Xóa đơn THÀNH CÔNG!"
+        fail: "Xóa đơn THẤT BẠI!"
       title:
         order_date: "Ngày đặt"
         quantity: "Số lượng"
@@ -229,12 +233,14 @@ vi:
         date: "Ngày : "
         time: "Khung giờ : "
         type: "Loại sân : "
-        btn_handle: "Xem trạng thái"
-        btn_view: "Xem"
+        btn_handle: "Chờ xử lý"
+        btn_cancelled: "Đơn hủy"
         btn_exit: "Thoát"
+        btn_delete: "Xóa đơn"
         btn_cancel: "Hủy đơn"
         date_format: "%d/%m/%Y"
         detele_order_detail: "Gỡ"
+        alert_delete: "return confirm('Bạn muốn xóa đơn?')"
     order_details:
       destroy:
         success: "Xóa sân bóng THÀNH CÔNG!"
@@ -387,6 +393,9 @@ vi:
       field_name: "Tên sân : "
       description: "Mô tả"
       price: "Giá sân : "
+      condition: "Tình trạng của sân"
+      good: "Đảm bảo"
+      not_good: "Chưa đảm bảo"
   carts:
     index:
       cart_empty: "Giỏ hàng trống!"
@@ -410,7 +419,7 @@ vi:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
-      short: "%H:%M"
+      short: "%d/%m/%Y"
   alert:
     add_to_cart:
       fail: "Thêm giỏ hàng Thất Bại!"

@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   def correct_user
     return if current_user?(@user)
 
-    flash[:danger] = t ".danger"
+    flash[:danger] = t "users.correct_user.danger"
     redirect_to root_url
   end
 
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user.present?
 
-    flash[:warning] = t ".warning"
+    flash[:warning] = t "users.load_user.warning"
     redirect_to root_url
   end
 end

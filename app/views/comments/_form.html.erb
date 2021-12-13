@@ -1,4 +1,4 @@
-<div class="widget-area no-padding blank">
+<div class="widget-area no-padding blank bg-info">
   <div class="status-upload">
     <% if logged_in? %>
       <%= form_for @comment  do |f| %>
@@ -7,9 +7,11 @@
         <%= f.submit t("detail.comment"), class: "btn btn-success green" %>
       <% end %>
     <% else %>
-      <p> <%= t "login.name" %>:
-        <%= link_to t("login.click"),login_path %>
-      </p>
+      <div>
+        <p class="font-weight-bold center"><%= t ".name" %>:
+          <%= link_to t(".click"), login_path %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>
