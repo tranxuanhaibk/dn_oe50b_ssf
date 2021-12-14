@@ -16,8 +16,6 @@ en:
   application:
     check_admin:
       warning: "You not admin!"
-    logged_in_user:
-      danger: "Please login!"
   soccer_fields_controller:
     create_success: "Add soccer_fields success"
     create_warning: "Add soccer_fields failed"
@@ -247,6 +245,19 @@ en:
         btn_cancel: "Cancel"
         date_format: "%d/%m/%Y"
   users:
+    sessions:
+      new:
+        email: "Email address"
+        password: "Password"
+        forgot_password: "(Forgot password)"
+        login: "Login"
+        title: "Log in"
+        remember: "Remember me"
+        facebook: "Sign in with Facebook"
+        google: "Sign in with Google"
+        new_user: "New User?"
+        sign_up_now: "Sign up now!"
+        or: "OR"
     index:
       danger:
     user:
@@ -259,15 +270,19 @@ en:
       updateAccount: "Update Account"
       save_changes: "Save change"
       h1: "Edit Form"
-    form:
-      name: "Name"
-      email: "Email"
-      password: "Password"
-      password_confirmation: "Password confirmation"
-      phone: "Number phone"
-    new:
-      create_account: "Create account"
-      h1: "Sign up"
+    registrations:
+      new:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        phone: "Number phone"
+        create_account: "Create account"
+        title: "Sign up"
+    unlocks:
+      new:
+        title: "Unlock account"
+        resend_unlock: "Resend unlock instructions"
     show:
       about: "About"
       user_id: "ID"
@@ -318,26 +333,6 @@ en:
   asession:
     show:
       warning: "No user found"
-  sessions:
-    new:
-      email: "Email address"
-      password: "Password"
-      forgot_password: "(Forgot password)"
-      login: "Login"
-      title: "Log in"
-      remember: "Remember me"
-      facebook: "Sign in with Facebook"
-      google: "Sign in with Google"
-      new_user: "New User?"
-      sign_up_now: "Sign up now!"
-      or: "OR"
-    login: "Login"
-    email: "Email address"
-    password: "Password"
-    create:
-      invalid: "Invalid email/password combination"
-    check_activated:
-      warning: "Account not activated. Check your email for the activation link."
   form:
     session:
       password: "Password"
