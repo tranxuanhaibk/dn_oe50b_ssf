@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  rescue_from CanCan::AccessDenied do |_exception|
+    if user_signed_in?
+      flash[:danger] = t "message.cancancan.not_permission"
+      redirect_to root_path
+    else
+      flash[:danger] = t "message.cancancan.not_login"
+      redirect_to login_path
+    end
+  end
+
   private
 
   def set_locale
@@ -12,12 +22,5 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
-  end
-
-  def check_admin
-    return if current_user.admin?
-
-    flash[:warning] = t "application.check_admin.warning"
-    redirect_to root_path
   end
 end

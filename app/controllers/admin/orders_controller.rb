@@ -1,4 +1,4 @@
-class Admin::OrdersController < ApplicationController
+class Admin::OrdersController < AdminController
   before_action :load_order, :check_status_order, only: :update
   def index
     @orders = Order.status_asc.paginate page: params[:page],

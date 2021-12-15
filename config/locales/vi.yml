@@ -350,6 +350,9 @@ vi:
       order_fail: "Đặt sân thất bại"
       order_succ_mess: "Cảm ơn bạn đã tin tưởng và lựa chọn sân bóng của chúng tôi!"
       order_fail_mess: "Hệ thống đã xảy ra lỗi vui lòng thử lại sau!"
+    cancancan:
+      not_permission: "Bạn không có quyền truy cập tài nguyên này."
+      not_login: "Vui lòng đăng nhập trước khi thực hiện hành động này."
   assession:
     show:
       warning: "Không tìm thấy người dùng"
