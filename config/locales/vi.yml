@@ -16,8 +16,6 @@ vi:
   application:
     check_admin:
       warning: "Bạn không phải quản trị viên!"
-    logged_in_user:
-      danger: "Vui lòng đăng nhập!"
   soccer_fields_controller:
     create_success: "Thêm sân đá bóng vào thành công"
     create_warning: "Thêm sân đá bóng vào không thành công"
@@ -250,6 +248,11 @@ vi:
         btn_cancel: "Hủy đơn"
         date_format: "%d/%m/%Y"
   users:
+    confirmations:
+      new:
+        email: "Địa chỉ email"
+        title: "Hướng dẫn xác nhận"
+        resend_confirmation: "Gửi lại hướng dẫn xác nhận"
     sessions:
       new:
         email: "Địa chỉ email"
@@ -282,6 +285,20 @@ vi:
         phone: "Số điện thoại"
         create_account: "Tạo tài khoản"
         title: "Đăng ký"
+      edit:
+        title: "Cập nhật hồ sơ"
+        email: "Địa chỉ Email"
+        name: "Tên người dùng"
+        phone: "Số điện thoại"
+        edit: "Cập nhật"
+        waiting_confirm: "Hiện đang chờ xác nhận cho"
+        dont_change: "(để trống nếu bạn không muốn thay đổi nó)"
+        need_password: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận các thay đổi của bạn)"
+        minimum_pasword: "kí tự nhỏ nhất"
+        password: "Mât khẩu"
+        password_confirmation: "Xác nhận mât khẩu"
+        current_password: "Mật khẩu hiện tại"
+        back: "Quay lại"
     unlocks:
       new:
         title: "Mở khóa tài khoản"

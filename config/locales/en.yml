@@ -245,6 +245,11 @@ en:
         btn_cancel: "Cancel"
         date_format: "%d/%m/%Y"
   users:
+    confirmations:
+      new:
+        email: "Email address"
+        title: "Confirmation instructions"
+        resend_confirmation: "Resend confirmation instructions"
     sessions:
       new:
         email: "Email address"
@@ -279,6 +284,20 @@ en:
         phone: "Number phone"
         create_account: "Create account"
         title: "Sign up"
+      edit:
+        title: "Edit profile"
+        email: "Email address"
+        name: "Name"
+        phone: "Phone"
+        edit: "Edit"
+        waiting_confirm: "Currently waiting confirmation for"
+        dont_change: "(leave blank if you don't want to change it)"
+        need_password: "(we need your current password to confirm your changes)"
+        minimum_pasword: "Minimum pasword"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        back: "Back"
     unlocks:
       new:
         title: "Unlock account"

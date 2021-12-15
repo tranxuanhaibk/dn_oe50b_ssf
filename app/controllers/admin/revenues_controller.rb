@@ -1,5 +1,5 @@
 class Admin::RevenuesController < ApplicationController
-  before_action :logged_in_user, :check_admin
+  before_action :authenticate_user!, :check_admin
 
   def index; end
 
