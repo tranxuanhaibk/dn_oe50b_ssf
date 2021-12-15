@@ -14,19 +14,6 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "application.logged_in_user.danger"
-    redirect_to login_path
-  end
-
-  def login user
-    log_in user
-    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-  end
-
   def check_admin
     return if current_user.admin?
 

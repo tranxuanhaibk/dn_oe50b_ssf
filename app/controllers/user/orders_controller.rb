@@ -1,5 +1,5 @@
 class User::OrdersController < ApplicationController
-  before_action :logged_in_user
+  before_action :authenticate_user!
   before_action :load_order, only: %i(destroy update)
 
   def index

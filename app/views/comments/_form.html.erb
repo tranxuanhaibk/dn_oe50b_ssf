@@ -1,6 +1,6 @@
 <div class="widget-area no-padding blank bg-info">
   <div class="status-upload">
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <%= form_for @comment  do |f| %>
         <%= f.hidden_field :soccer_field_id, value: @soccer_field.id %>
         <%= f.text_area :content, placeholder: t("detail.chat"),required: true %>
