@@ -2,6 +2,7 @@ class SoccerField < ApplicationRecord
   has_many :order_details, dependent: :destroy
   has_many :soccer_rates, dependent: :destroy
   has_many :comments, dependent: :destroy
+  ransack_alias :soccer_field, :field_name
   scope :order_by_field_name, ->{order :field_name}
   validates :field_name, presence: true
   validates :field_name, length:

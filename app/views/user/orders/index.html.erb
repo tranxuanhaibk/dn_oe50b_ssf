@@ -1,5 +1,11 @@
 <% provide :title, t("admin.manager_booking_field") %>
 <div class="col-lg-9">
+   <%= search_form_for @booking_user, url: user_orders_path, class: "form-group d-flex mb-2 form-search-user float-right" do |f| %>
+    <%= f.select(:status_eq, options_for_select(Order.statuses.map {|k, v| [k.humanize.capitalize, v]}, f.object.status_eq), { include_blank: t("search.choose_status")}, {class: "form-control mr-2" }) %>
+    <%= button_tag(type: "submit", class: "btn btn-dark") do %>
+      <i class="fa fa-search"></i>
+    <% end %>
+  <% end %>
   <div>
     <h3><%= t ".name_user_order" %><%= current_user.name %></h3>
      <h5><%= t ".email_user_order" %><%= current_user.email %></h5>

@@ -1,9 +1,11 @@
 class Admin::SoccerFieldsController < AdminController
   before_action :load_soccer_field, only: %i(edit update destroy)
+  before_action :check_search_location, only: :index
   def index
-    @soccer_fields = SoccerField.order_by_field_name
-                                .paginate(page: params[:page],
-                                          per_page: Settings.paginate.manage)
+    @s = SoccerField.ransack(params[:q])
+    @soccer_fields = @s.result(distinct: true).order_by_field_name
+                       .paginate(page: params[:page],
+                        per_page: Settings.paginate.manage)
   end
 
   def new

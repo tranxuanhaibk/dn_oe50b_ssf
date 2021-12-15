@@ -1,9 +1,11 @@
 class User::OrdersController < UserController
   before_action :load_order, only: %i(destroy update)
+  before_action :check_search_location, only: :index
 
   def index
-    @orders = current_user.orders.date_desc.paginate page: params[:page],
-    per_page: Settings.admin_order.per_page
+    @booking_user = current_user.orders.ransack(params[:q])
+    @orders = @booking_user.result.status_asc.paginate page: params[:page],
+                                    per_page: Settings.admin_order.per_page
   end
 
   def order_soccer_field

@@ -50,7 +50,9 @@ en:
     sub_accept: "Notification booking success!"
     sub_rejected: "Confirm booking failure!"
   search:
-    danger: "empty data"
+    danger: "No search results"
+    choose_status: "--Choose status"
+    role: "--Choose role"
     success: "Search success"
     info: "search failed"
   base:
@@ -58,6 +60,8 @@ en:
     name: "Soccer Field"
     location: "Location"
     cancel: "Cancel"
+    search: "Search Soccer Field by name, phone, address"
+    search-user: "Input name, email, phone"
   home:
     searching: "Searching..."
     searching: "Search..."
@@ -144,6 +148,8 @@ en:
       time: "Time"
       order_date: "Order Date"
       user_order: "User Order"
+      quantity: "Quantily"
+      total_cost: "Total Cost"
   order:
     name: "Order"
     search: "Seach"

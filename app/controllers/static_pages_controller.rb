@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
   before_action :load_soccer_field, only: :show
+  before_action :check_search_location, only: :index
   def index
-    @soccer_fields = SoccerField.order_by_field_name
-                                .paginate(page: params[:page],
-                                          per_page: Settings.paginate.home)
+    @soccer_fields = @q.result(distinct: true).paginate(page: params[:page],
+                           per_page: Settings.paginate.manage)
   end
 
   def show
