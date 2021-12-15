@@ -250,6 +250,19 @@ vi:
         btn_cancel: "Hủy đơn"
         date_format: "%d/%m/%Y"
   users:
+    sessions:
+      new:
+        email: "Địa chỉ email"
+        password: "Mật Khẩu"
+        forgot_password: "(Quên mật khẩu)"
+        login: "Đăng Nhập"
+        title: "Đăng Nhập"
+        remember: "Ghi nhớ mật khẩu"
+        facebook: "Đăng nhập bằng Facebook"
+        google: "Đăng nhập bằng  Google"
+        new_user: "Người dùng mới?"
+        or: "Hoặc"
+        sign_up_now: "Đăng ký ngay!"
     user:
       delete: "Xóa"
       edit: "Sửa"
@@ -260,15 +273,19 @@ vi:
       updateAccount: "Cập nhật tài khoản"
       save_changes: "Lưu thay đổi"
       h1: "Mẫu chỉnh sửa"
-    form:
-      name: "Tên người dùngs"
-      email: "Địa chỉ Email"
-      password: "Mật khẩu"
-      password_confirmation: "Xác nhận mật khẩu"
-      phone: "Số điện thoại"
-    new:
-      create_account: "Tạo tài khoản"
-      h1: "Đăng ký"
+    registrations:
+      new:
+        name: "Tên người dùng"
+        email: "Địa chỉ Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        phone: "Số điện thoại"
+        create_account: "Tạo tài khoản"
+        title: "Đăng ký"
+    unlocks:
+      new:
+        title: "Mở khóa tài khoản"
+        resend_unlock: "Gửi lại hướng dẫn mở khóa"
     show:
       about: "Về tôi"
       user_id: "ID"
@@ -319,26 +336,6 @@ vi:
   assession:
     show:
       warning: "Không tìm thấy người dùng"
-  sessions:
-    new:
-      email: "Địa chỉ email"
-      password: "Mật Khẩu"
-      forgot_password: "(Quên mật khẩu)"
-      login: "Đăng Nhập"
-      title: "Đăng Nhập"
-      remember: "Ghi nhớ mật khẩu"
-      facebook: "Đăng nhập bằng Facebook"
-      google: "Đăng nhập bằng  Google"
-      new_user: "Người dùng mới?"
-      or: "Hoặc"
-      sign_up_now: "Đăng ký ngay!"
-    login: "Đăng Nhập"
-    email: "Địa chỉ email"
-    password: "Mật Khẩu"
-    create:
-      invalid: "Sai email hoặc mật khẩu"
-    check_activated:
-      warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
   form:
     session:
       password: "Mật khẩu"

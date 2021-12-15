@@ -4,9 +4,8 @@ User.create!(name: "Tran Hai",
              password: "123456",
              password_confirmation: "123456",
              role: 1,
-             activated: true,
-             activated_at: Time.zone.now)
-50.times do |n|
+             confirmed_at: Time.zone.now)
+30.times do |n|
   name = Faker::Name.name
   email = "tranhai-#{n+1}@gmail.com"
   password = "password"
@@ -16,8 +15,7 @@ User.create!(name: "Tran Hai",
                phone: phone,
                password: password, 
                password_confirmation: password,
-               activated: true,
-               activated_at: Time.zone.now)
+               confirmed_at: Time.zone.now)
 end
 10.times do |n|
   field_name = "Sân bóng #{n+1}"
