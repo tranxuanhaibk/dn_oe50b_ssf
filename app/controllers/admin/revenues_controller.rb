@@ -1,6 +1,4 @@
-class Admin::RevenuesController < ApplicationController
-  before_action :authenticate_user!, :check_admin
-
+class Admin::RevenuesController < AdminController
   def index; end
 
   def search_revenue

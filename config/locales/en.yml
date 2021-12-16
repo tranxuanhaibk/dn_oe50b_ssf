@@ -349,6 +349,9 @@ en:
       order_fail: "Booking failed"
       order_succ_mess: "Thank you for choosing our soccer field!"
       order_fail_mess: "There was an error in the system, please try again later!"
+    cancancan:
+      not_permission: "You do not have permission to access this resource."
+      not_login: "Please login before performing this action."
   asession:
     show:
       warning: "No user found"

@@ -1,5 +1,4 @@
-class User::OrdersController < ApplicationController
-  before_action :authenticate_user!
+class User::OrdersController < UserController
   before_action :load_order, only: %i(destroy update)
 
   def index
