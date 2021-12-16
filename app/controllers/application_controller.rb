@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include CartsHelper
 
-  before_action :set_locale
+  before_action :set_locale, :set_search
 
   rescue_from CanCan::AccessDenied do |_exception|
     if user_signed_in?
@@ -22,5 +22,24 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
+  end
+
+  def set_search
+    @q = SoccerField.ransack(params[:q])
+  end
+
+  def check_admin
+    return if current_user.admin?
+
+    flash[:warning] = t "application.check_admin.warning"
+    redirect_to root_path
+  end
+
+  def check_search_location
+    return unless params[:q]
+
+    return if @q.result.any?
+
+    flash[:info] = t "search.info"
   end
 end

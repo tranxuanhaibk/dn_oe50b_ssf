@@ -1,7 +1,9 @@
 class Admin::OrdersController < AdminController
   before_action :load_order, :check_status_order, only: :update
+  before_action :check_search_location, only: :index
   def index
-    @orders = Order.status_asc.paginate page: params[:page],
+    @o = Order.ransack(params[:q])
+    @orders = @o.result(distinct: true).status_asc.paginate page: params[:page],
       per_page: Settings.admin_order.per_page
   end
 

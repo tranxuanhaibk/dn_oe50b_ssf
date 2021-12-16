@@ -57,6 +57,8 @@ vi:
     name: "Sân bóng Sun*"
     location: "Vị trí"
     cancel: "Hủy bỏ"
+    search: "Tìm kiếm sân bóng đá bằng tên, số điện thoại, địa chỉ"
+    search-user: "Nhập tên, email"
   home:
     searching: "Tìm kiếm..."
     address: "Địa chỉ: "
@@ -142,6 +144,8 @@ vi:
       time: "Khung giờ"
       order_date: "Ngày Đặt"
       user_order: "Người Đặt Sân"
+      quantity: "Số Lượng"
+      total_cost: "Tổng Tiền"
   order:
     name: "Đặt sân"
     search: "Tìm kiếm"

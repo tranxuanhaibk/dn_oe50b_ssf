@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   before_save :downcase_email
-
+  ransack_alias :user, :name_or_email_or_phone
   validates :email, format: {with: Settings.email_regex},
                     uniqueness: {case_sensitive: false},
                     length: {maximum: Settings.model.user.email_max},
