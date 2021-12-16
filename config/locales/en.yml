@@ -256,6 +256,8 @@ en:
         email: "Email address"
         title: "Confirmation instructions"
         resend_confirmation: "Resend confirmation instructions"
+    lock: "Lock"
+    unlock: "Unlock"
     sessions:
       new:
         email: "Email address"
@@ -462,6 +464,7 @@ en:
       order_fail: "The field is already booked, Please choose another course!"
       order_success: "Successfully placed, Please check and close the order!"
       ordered: "Football field booked!"
+    process_success: "Process Success"
   send_email:
     link: "Link"
     greeting_user: "Hello! User."
@@ -471,3 +474,12 @@ en:
     content_cancel_admin: "Admin has canceled a field"
   email_password_invalid: "Email or password is invalid"
   not_account_admin: "You can not create account same ADMIN"
+  show:
+    about: "Information"
+    userid: "User Id"
+    name: "Name"
+    email: "Email Address"
+    phone: "Phone Number"
+    role: "Role"
+  update_sucess: "process successful"
+  update_fail: "Process failed, please check again"
