@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 import "bootstrap"
+import "chartkick/chart.js"
 require("packs/reply")
 require("packs/handle_request_order")
 require("packs/handle_order_user")

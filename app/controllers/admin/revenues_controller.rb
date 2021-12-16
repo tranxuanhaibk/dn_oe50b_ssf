@@ -1,4 +1,7 @@
-class Admin::RevenuesController < AdminController
+class Admin::RevenuesController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource class: false
+
   def index; end
 
   def search_revenue
