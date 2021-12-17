@@ -29,3 +29,6 @@ rspec:
   model:
     length_max_255: 255
     name_length_max_50: 50
+banner:
+  lock: "lock"
+  unlock: "unlock"

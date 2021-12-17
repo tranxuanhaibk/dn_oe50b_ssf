@@ -15,6 +15,7 @@ User.create!(name: "Tran Hai",
                phone: phone,
                password: password, 
                password_confirmation: password,
+               role: 0,
                confirmed_at: Time.zone.now)
 end
 10.times do |n|

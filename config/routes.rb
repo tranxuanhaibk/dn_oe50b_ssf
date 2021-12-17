@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       resources :soccer_fields, except: %i(show)
       resources :orders, only: %i(index update)
       resources :revenues, only: :index
-      resources :users
+      resources :users, only: %i(index update)
     end
 
     namespace :user do
