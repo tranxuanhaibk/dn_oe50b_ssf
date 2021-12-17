@@ -257,6 +257,8 @@ vi:
         email: "Địa chỉ email"
         title: "Hướng dẫn xác nhận"
         resend_confirmation: "Gửi lại hướng dẫn xác nhận"
+    lock: "Khóa"
+    unlock: "Mở khóa"
     sessions:
       new:
         email: "Địa chỉ email"
@@ -450,6 +452,7 @@ vi:
       default: "%d/%m/%Y"
       short: "%d/%m/%Y"
       long: "%B %d, %Y"
+      short1: "%b %Y"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
@@ -461,6 +464,7 @@ vi:
       order_fail: "Sân đã có người đặt, Vui lòng chọn sân khác!"
       order_success: "Đặt thành công, Vùi lòng kiểm tra và Chốt đơn!"
       ordered: "Sân đã đặt!"
+    process_success: "xử lý thành công"
   send_email:
     link: "Đường dẫn"
     greeting_user: "Xin chào! Người dùng."
@@ -470,3 +474,17 @@ vi:
     content_cancel_admin: "Quản trị viên đã hủy bỏ việc đặt sân."
   email_password_invalid: "Email hoặc mật khẩu không hợp lệ"
   not_account_admin: "Bạn không thể tạo tài khoản giống admin"
+  show:
+    about: "Thông tin"
+    userid: "User Id"
+    name: "Tên"
+    email: "Địa chỉ Email"
+    phone: "Số điện thoại"
+    role: "Quyền"
+  update_sucess: "xử lý thành công"
+  update_fail: "Xử lý thất bại vui lòng kiểm tra lại"
+  graphy:
+    week: "Người Dùng Đăng Ký Theo Tuần Mỗi Năm"
+    month: "Người Dùng Đăng Ký Theo Tháng Mỗi Năm"
+    quarter: "Người Dùng Đăng Ký Theo Quý Mỗi Năm"
+    year: "Người Dùng Đăng Ký Hằng Năm"

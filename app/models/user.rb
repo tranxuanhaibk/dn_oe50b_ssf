@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  #  :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :confirmable, :lockable
 
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -27,6 +27,8 @@ class User < ApplicationRecord
   validates :phone, presence: true, format: {with: Settings.phone_regex},
                     allow_blank: true
   enum role: {user: 0, admin: 1}
+
+  scope :order_by_name, ->{order :name}
 
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now

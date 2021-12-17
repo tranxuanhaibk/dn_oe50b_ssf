@@ -15,7 +15,9 @@ User.create!(name: "Tran Hai",
                phone: phone,
                password: password, 
                password_confirmation: password,
-               confirmed_at: Time.zone.now)
+               role: 0,
+               confirmed_at: Time.zone.now,
+               created_at: rand(2.years).seconds.ago)
 end
 10.times do |n|
   field_name = "Sân bóng #{n+1}"

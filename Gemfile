@@ -27,6 +27,8 @@ gem "i18n-js"
 gem "devise", "~> 4.1"
 gem "cancancan"
 gem "ransack"
+gem "chartkick"
+gem "groupdate"
 
 group :development, :test do
   gem "factory_bot_rails"
