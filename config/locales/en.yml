@@ -392,6 +392,12 @@ en:
       hours: "hours"
       text_body: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   admin:
+    statistics:
+      index:
+        title: "Statistics number of bookings"
+        weeks: "Statistics by weeks"
+        months: "Statistics by months"
+        years: "Statistics by years"
     revenues:
       index:
         date: "Select date"
@@ -409,6 +415,7 @@ en:
     manager_booking_field: "Manager booking field"
     manager_user: "Manager user"
     manager_revenue: "Manager revenue"
+    statistics_orders: "Statistics number of bookings"
     manager_field: "Manager field"
   layouts:
     header:
@@ -449,7 +456,7 @@ en:
   date:
     formats:
       default: "%d/%m/%Y"
-      short: "%d/%m/%Y"
+      short: "%b %Y"
       long: "%B %d, %Y"
       short1: "%b %Y"
   time:

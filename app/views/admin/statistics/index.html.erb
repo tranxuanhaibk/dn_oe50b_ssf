@@ -1,0 +1,15 @@
+<div class="col-lg-9">
+  <h1 class = "center font-weight-bold"><%= t (".title")%></h1>
+  <div>
+    <%= line_chart admin_statistic_week_path,
+      format: t("date.formats.short"), title: t(".weeks") %>
+  </div>
+  <div>
+    <%= column_chart admin_statistic_month_path,
+      format: t("date.formats.short"), title: t(".months") %>
+  </div>
+  <div>
+    <%= pie_chart admin_statistic_year_path, donut: true, suffix: "%",
+    title: t(".years") %>
+  </div>
+</div>

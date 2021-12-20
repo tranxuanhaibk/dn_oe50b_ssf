@@ -391,6 +391,12 @@ vi:
       hours: "giờ"
       text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."
   admin:
+    statistics:
+      index:
+        title: "Thống kê số lượng đặt sân"
+        weeks: "Thống kê theo tuần"
+        months: "Thống kê theo tháng"
+        years: "Thống kê theo năm"
     revenues:
       index:
         date: "Chọn ngày"
@@ -408,6 +414,7 @@ vi:
     manager_booking_field: "Quản lý đơn đặt sân"
     manager_user: "Quản lý người dùng"
     manager_revenue: "Quản lý doanh thu"
+    statistics_orders: "Thống kê số lương đặt sân"
     manager_field: "Quản lý sân"
   layouts:
     header:
@@ -450,7 +457,7 @@ vi:
   date:
     formats:
       default: "%d/%m/%Y"
-      short: "%d/%m/%Y"
+      short: "%b %Y"
       long: "%B %d, %Y"
       short1: "%b %Y"
   time:
