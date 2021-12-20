@@ -452,6 +452,7 @@ vi:
       default: "%d/%m/%Y"
       short: "%d/%m/%Y"
       long: "%B %d, %Y"
+      short1: "%b %Y"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
@@ -482,3 +483,8 @@ vi:
     role: "Quyền"
   update_sucess: "xử lý thành công"
   update_fail: "Xử lý thất bại vui lòng kiểm tra lại"
+  graphy:
+    week: "Người Dùng Đăng Ký Theo Tuần Mỗi Năm"
+    month: "Người Dùng Đăng Ký Theo Tháng Mỗi Năm"
+    quarter: "Người Dùng Đăng Ký Theo Quý Mỗi Năm"
+    year: "Người Dùng Đăng Ký Hằng Năm"
