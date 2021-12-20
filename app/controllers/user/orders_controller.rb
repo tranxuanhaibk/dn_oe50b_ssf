@@ -1,4 +1,4 @@
-class User::OrdersController < UserController
+class User::OrdersController < ApplicationController
   before_action :load_order, only: %i(destroy update)
   before_action :check_search_location, only: :index
 

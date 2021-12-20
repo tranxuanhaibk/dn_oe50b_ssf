@@ -25,6 +25,10 @@ Rails.application.routes.draw do
       resources :orders, only: %i(index update)
       resources :revenues, only: :index
       resources :users, only: %i(index update)
+      resources :statistics, only: %i(index)
+      get :statistic_month, to: "statistics#month"
+      get :statistic_week, to: "statistics#week"
+      get :statistic_year, to: "statistics#year"
     end
 
     namespace :user do

@@ -1,4 +1,4 @@
-class User::OrderDetailsController < UserController
+class User::OrderDetailsController < ApplicationController
   before_action :find_order_detail, only: :destroy
 
   def destroy
