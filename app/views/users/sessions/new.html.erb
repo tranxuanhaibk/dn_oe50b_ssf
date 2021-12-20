@@ -28,6 +28,7 @@
     </div>
   <% end %>
   <%= render "users/shared/links" %>
-
+  <%= link_to t("links.login_fb"), user_facebook_omniauth_authorize_path, method: :post %><br>
+  <%= link_to t("links.login_gg"), user_google_oauth2_omniauth_authorize_path, method: :post %>
 </div>
 <%= render "users/shared/logo"%>

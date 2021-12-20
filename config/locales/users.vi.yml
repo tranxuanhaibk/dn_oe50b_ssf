@@ -31,6 +31,8 @@ vi:
   links:
     login: "Đăng nhập"
     signup: "Đăng ký"
+    login_fb: "Đăng nhập với Facebook"
+    login_gg: "Đăng nhập với Google"
     forgot_password: "Quên mật khẩu"
     confirmation: "Không nhận được hướng dẫn xác nhận?"
     unlock: "Không nhận được hướng dẫn mở khóa?"

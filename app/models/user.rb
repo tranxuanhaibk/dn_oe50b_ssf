@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  #  :timeoutable, :trackable and :omniauthable
+  #  :timeoutable, :trackable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable, :lockable
+         :recoverable, :rememberable, :validatable, :confirmable, :lockable,
+         :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -44,6 +45,18 @@ class User < ApplicationRecord
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def self.from_omniauth auth
+    result = User.find_by email: auth.info.email
+    return result if result
+
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.name = auth.info.name
+      user.uid = auth.uid
+    end
   end
 
   private

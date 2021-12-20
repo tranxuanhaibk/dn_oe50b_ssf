@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 2021_12_14_081648) do
     t.string "phone"
     t.string "country"
     t.string "address"
+    t.string "provider"
+    t.string "uid"
     t.integer "role", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
