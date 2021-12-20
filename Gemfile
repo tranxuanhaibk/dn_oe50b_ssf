@@ -24,6 +24,8 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "i18n-js"
+gem "chartkick"
+gem "groupdate"
 gem "devise", "~> 4.1"
 gem "cancancan"
 gem "ransack"
