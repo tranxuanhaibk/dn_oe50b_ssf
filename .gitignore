@@ -81,3 +81,4 @@ config/database.yml
 yarn-debug.log*
 .yarn-integrity
 /config/application.yml
+/config/certs/*
