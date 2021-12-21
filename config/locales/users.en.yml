@@ -31,6 +31,8 @@ en:
   links:
     login: "Log in"
     signup: "Sign up"
+    login_fb: "Login With Facebook"
+    login_gg: "login With Google"
     forgot_password: "Forgot your password?"
     confirmation: "Didn't receive confirmation instructions?"
     confirmation: "Didn't receive unlock instructions?"

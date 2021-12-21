@@ -31,6 +31,11 @@ gem "cancancan"
 gem "ransack"
 gem "chartkick"
 gem "groupdate"
+gem "figaro"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
 
 group :development, :test do
   gem "factory_bot_rails"
