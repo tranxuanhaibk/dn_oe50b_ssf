@@ -36,11 +36,6 @@ gem "cancancan"
 gem "ransack"
 gem "chartkick"
 gem "groupdate"
-gem "figaro"
-gem "omniauth"
-gem "omniauth-facebook"
-gem "omniauth-google-oauth2"
-gem "omniauth-rails_csrf_protection"
 
 group :development, :test do
   gem "factory_bot_rails"
@@ -53,7 +48,6 @@ group :development, :test do
   gem "rubocop-rails", "~> 2.3.2", require: false
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry"
-  gem "shoulda-matchers", "~> 4.0"
 end
 
 group :development do

@@ -9,7 +9,8 @@ class Ability
     if user&.user?
       can %i(update read), User, id: user.id
       can :manage, Comment
-      can %i(read create update order_soccer_field), Order
+      can %i(read create update order_soccer_field), [Order]
+      can [:destroy], OrderDetail
     end
 
     can :manage, :all if user&.admin?
