@@ -16,6 +16,7 @@ class User::OrdersController < UserController
                       status: 0, total_cost: soccer_field.price * value.length)
         create_order_detail value, ordered, soccer_field
         create_notification
+        send_mail_when_order ordered
       end
     end
     delete_cookie_soccer_field
@@ -73,6 +74,10 @@ class User::OrdersController < UserController
     Notification.create(recipient: User.first, actor: current_user,
       title: current_user.name + t("notification.title_ad"),
       content: t("notification.content_ad"))
+  end
+
+  def send_mail_when_order ordered
+    UserMailer.notify_order(ordered).deliver_now
   end
 
   def delete_cookie_soccer_field

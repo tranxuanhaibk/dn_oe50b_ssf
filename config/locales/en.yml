@@ -499,5 +499,6 @@ en:
     year: "Users Register Every Year"
   notification:
     title_ad: " booking soccer field"
+    title_remind: "Notify users pending approval"
     at_time: "at"
-    content_ad: "Please go to order manager to approve"
+    content_ad: "Please go to order soccer field manage to approve"

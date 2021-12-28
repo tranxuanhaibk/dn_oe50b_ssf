@@ -498,5 +498,6 @@ vi:
     year: "Người Dùng Đăng Ký Hằng Năm"
   notification:
     title_ad: " đã đặt sân bóng"
-    at_time: "vào lúc"
-    content_ad: "Vui lòng vào quản lý đơn đặt hàng để phê duyệt!"
+    title_remind: "Thông báo người dùng đang chờ phê duyệt"
+    at_time: "vào ngày"
+    content_ad: "Vui lòng vào quản lý đơn đặt sân để phê duyệt!"
